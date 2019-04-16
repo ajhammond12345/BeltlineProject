@@ -11,3 +11,5 @@ import UIKit
 class Utility: NSObject {
 
 }
+
+//cole typingx
