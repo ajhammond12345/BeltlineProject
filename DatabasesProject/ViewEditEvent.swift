@@ -10,7 +10,21 @@ import UIKit
 
 class ViewEditEvent: UIViewController {
 
+    @IBOutlet weak var name: UIScrollView!
+    @IBOutlet weak var price: UIScrollView!
+    @IBOutlet weak var capacity: UIScrollView!
+    @IBOutlet weak var startDate: UIScrollView!
+    @IBOutlet weak var endDate: UIScrollView!
+    @IBOutlet weak var minStaffReq: UIScrollView!
+    @IBOutlet weak var table: UIScrollView!
+    @IBOutlet weak var desc: UIScrollView!
+    @IBOutlet weak var dailyVisitsLow: UIScrollView!
+    @IBOutlet weak var dailyVisitsHigh: UIScrollView!
+    @IBOutlet weak var dailyRevLow: UIScrollView!
+    @IBOutlet weak var dailyRevRange: UIScrollView!
     
+    @IBAction func filter(_ sender: Any) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
