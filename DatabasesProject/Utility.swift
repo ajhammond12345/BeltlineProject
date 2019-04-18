@@ -9,7 +9,10 @@
 import UIKit
 
 class Utility: NSObject {
+    static let employeeTypes: [String] = ["Manager", "Staff"]
+    
+    static let states: [String] = ["AL", "GA"]
 
 }
 
-//cole typingx
+
