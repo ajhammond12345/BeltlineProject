@@ -39,7 +39,7 @@ class Model: NSObject {
         return true;
     }
     
-    func register(email: String, password: String) -> Bool {
+    func register(user: User, password: String) -> Bool {
         //TODO: implement login
         return true;
     }

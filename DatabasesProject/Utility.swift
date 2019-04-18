@@ -9,7 +9,9 @@
 import UIKit
 
 class Utility: NSObject {
-    class func one() {print("class - one()")}
+    static let employeeTypes: [String] = ["Manager", "Staff"]
+    
+    static let states: [String] = ["AL", "GA"]
 
 }
 

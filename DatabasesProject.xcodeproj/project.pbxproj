@@ -17,6 +17,8 @@
 		700D77E42257B513009FE1EF /* DatabasesProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700D77E32257B513009FE1EF /* DatabasesProjectUITests.swift */; };
 		707F25F62268FD3D0066EC03 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F25F52268FD3D0066EC03 /* User.swift */; };
 		707F25F82268FDE70066EC03 /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F25F72268FDE70066EC03 /* Visitor.swift */; };
+		707F25FA2268FF010066EC03 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F25F92268FF010066EC03 /* Employee.swift */; };
+		707F25FC226905800066EC03 /* EmployeeVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F25FB226905800066EC03 /* EmployeeVisitor.swift */; };
 		70E066E62266551C00E8138A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E066E52266551C00E8138A /* Login.swift */; };
 		70E066E82266552D00E8138A /* RegisterNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E066E72266552D00E8138A /* RegisterNavigation.swift */; };
 		70E066EA2266553E00E8138A /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E066E92266553E00E8138A /* RegisterUser.swift */; };
@@ -63,6 +65,8 @@
 		700D77E52257B513009FE1EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		707F25F52268FD3D0066EC03 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		707F25F72268FDE70066EC03 /* Visitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visitor.swift; sourceTree = "<group>"; };
+		707F25F92268FF010066EC03 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		707F25FB226905800066EC03 /* EmployeeVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeVisitor.swift; sourceTree = "<group>"; };
 		70E066E52266551C00E8138A /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		70E066E72266552D00E8138A /* RegisterNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNavigation.swift; sourceTree = "<group>"; };
 		70E066E92266553E00E8138A /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				70E066E52266551C00E8138A /* Login.swift */,
 				707F25F52268FD3D0066EC03 /* User.swift */,
 				707F25F72268FDE70066EC03 /* Visitor.swift */,
+				707F25F92268FF010066EC03 /* Employee.swift */,
+				707F25FB226905800066EC03 /* EmployeeVisitor.swift */,
 				70E066F52266782900E8138A /* Navigation.swift */,
 				70E066E72266552D00E8138A /* RegisterNavigation.swift */,
 				70E066F722667C6500E8138A /* EmailCell.swift */,
@@ -295,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				707F25FC226905800066EC03 /* EmployeeVisitor.swift in Sources */,
 				70E066F22266558F00E8138A /* Utility.swift in Sources */,
 				700D77C92257B511009FE1EF /* DatabasesProject.xcdatamodeld in Sources */,
 				70E066EA2266553E00E8138A /* RegisterUser.swift in Sources */,
@@ -304,6 +311,7 @@
 				707F25F62268FD3D0066EC03 /* User.swift in Sources */,
 				700D77C32257B511009FE1EF /* ViewController.swift in Sources */,
 				700D77C12257B511009FE1EF /* AppDelegate.swift in Sources */,
+				707F25FA2268FF010066EC03 /* Employee.swift in Sources */,
 				70E066F822667C6500E8138A /* EmailCell.swift in Sources */,
 				70E066E62266551C00E8138A /* Login.swift in Sources */,
 				70E066F4226655A200E8138A /* Model.swift in Sources */,

@@ -14,6 +14,10 @@ class User: NSObject {
     var username: String
     var emails: [String]
     
+    func isVisitor() -> Bool {
+        return false
+    }
+    
     init(first: String, last: String, uname: String, emailAddresses: [String]) {
         self.fname = first
         self.lname = last

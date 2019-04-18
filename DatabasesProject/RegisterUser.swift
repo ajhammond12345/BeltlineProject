@@ -44,7 +44,20 @@ class RegisterUser: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBOutlet weak var confirmPassword: UITextField!
     
     @IBAction func register(_ sender: Any) {
-        
+        if let first = firstName.text, let last = lastName.text, let uname = username.text {
+            let user: User = User(first: first, last: last, uname: uname, emailAddresses: emailList)
+            if let pass = password.text, let conf = confirmPassword.text {
+                if pass.elementsEqual(conf) {
+                    if (Model.getInstance().register(user: user, password: pass)) {
+                        performSegue(withIdentifier: "register_user_to_nav", sender: self)
+                    }
+                }
+            } else {
+                //TODO missing password
+            }
+        } else {
+            //TODO Missing information
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,5 +1,5 @@
 //
-//  Visitor.swift
+//  EmployeeVisitor.swift
 //  DatabasesProject
 //
 //  Created by Alexander Hammond on 4/18/19.
@@ -8,8 +8,7 @@
 
 import UIKit
 
-class Visitor: User {
-    
+class EmployeeVisitor: Employee {
     override func isVisitor() -> Bool {
         return true
     }

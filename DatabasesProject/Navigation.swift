@@ -13,7 +13,7 @@ class Navigation: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let usertype = model.getUserType()
+        let usertype = Model.getInstance().getUserType()
         
         /*
          User Types:
