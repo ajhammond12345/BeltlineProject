@@ -41,6 +41,26 @@ class Model: NSObject {
     
     func register(user: User, password: String) -> Bool {
         //TODO: implement login
+        
+        var utype: Int = 0
+        if user.isVisitor() {
+            utype += 1
+        }
+        if type(of: user) == Employee.self || type(of: user) == EmployeeVisitor.self {
+            let tmp: Employee = (user as! Employee)
+            if tmp.type == 0 {
+                utype = 2
+            }
+            if tmp.type == 1 {
+                utype = 3
+            }
+            if tmp.type == 2 {
+                utype = 4
+            }
+        }
+        if type(of: user) == EmployeeVisitor.self {
+            utype += 3
+        }
         return true;
     }
     

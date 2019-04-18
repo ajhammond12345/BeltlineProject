@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1190,10 +1190,10 @@
             </objects>
             <point key="canvasLocation" x="1950" y="3168"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation-->
         <scene sceneID="s1O-15-GX0">
             <objects>
-                <navigationController id="qNQ-HZ-7SF" sceneMemberID="viewController">
+                <navigationController id="qNQ-HZ-7SF" customClass="Navigation" customModule="DatabasesProject" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="euN-ZG-SzW">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2056,10 +2056,10 @@
             </objects>
             <point key="canvasLocation" x="4561" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Manager User-->
         <scene sceneID="Whh-kB-W69">
             <objects>
-                <viewController id="fzx-jo-l1S" sceneMemberID="viewController">
+                <viewController id="fzx-jo-l1S" customClass="ManagerUser" customModule="DatabasesProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7YB-Yo-58S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2167,6 +2167,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pNo-Tp-IvX"/>
                     </view>
+                    <connections>
+                        <outlet property="status" destination="tgl-oN-IbB" id="0Dy-pe-J7e"/>
+                        <outlet property="type" destination="w2f-7Z-1kI" id="3vo-Rh-RoC"/>
+                        <outlet property="username" destination="fJt-EO-woS" id="BrI-bt-AFV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6b-fv-FCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5256,11 +5261,9 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="CyT-fe-27u"/>
-        <segue reference="xtE-Xr-8tq"/>
-        <segue reference="e3A-ts-S2b"/>
         <segue reference="T3f-Bl-4NN"/>
         <segue reference="PiC-q2-Nfh"/>
-        <segue reference="6sB-1k-4cE"/>
+        <segue reference="aCP-ZZ-B1U"/>
         <segue reference="1Ii-X0-ejw"/>
     </inferredMetricsTieBreakers>
 </document>
