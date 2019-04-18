@@ -17,8 +17,12 @@ class Login: UIViewController {
     @IBAction func login(_ sender: Any) {
         if let emailText = email.text {
             if let passwordText = password.text {
-                //TODO login
-                performSegue(withIdentifier: "login_to_nav", sender: self)
+                if Model.getInstance().login(email: emailText, password: passwordText) {
+                    performSegue(withIdentifier: "login_to_nav", sender: self)
+                } else {
+                    //TODO login failed
+                }
+                
             } else {
                 //TODO missing password
             }

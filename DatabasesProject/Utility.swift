@@ -9,5 +9,8 @@
 import UIKit
 
 class Utility: NSObject {
+    class func one() {print("class - one()")}
 
 }
+
+
