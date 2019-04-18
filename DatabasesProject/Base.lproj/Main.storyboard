@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1190,10 +1190,10 @@
             </objects>
             <point key="canvasLocation" x="1950" y="3168"/>
         </scene>
-        <!--Navigation-->
+        <!--Navigation Controller-->
         <scene sceneID="s1O-15-GX0">
             <objects>
-                <navigationController id="qNQ-HZ-7SF" customClass="Navigation" customModule="DatabasesProject" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="qNQ-HZ-7SF" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="euN-ZG-SzW">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2056,10 +2056,10 @@
             </objects>
             <point key="canvasLocation" x="4561" y="134"/>
         </scene>
-        <!--Manager User-->
+        <!--View Controller-->
         <scene sceneID="Whh-kB-W69">
             <objects>
-                <viewController id="fzx-jo-l1S" customClass="ManagerUser" customModule="DatabasesProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fzx-jo-l1S" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7YB-Yo-58S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2167,20 +2167,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pNo-Tp-IvX"/>
                     </view>
-                    <connections>
-                        <outlet property="status" destination="tgl-oN-IbB" id="0Dy-pe-J7e"/>
-                        <outlet property="type" destination="w2f-7Z-1kI" id="3vo-Rh-RoC"/>
-                        <outlet property="username" destination="fJt-EO-woS" id="BrI-bt-AFV"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6b-fv-FCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4560.8000000000002" y="820.83958020989508"/>
         </scene>
-        <!--View Controller-->
+        <!--Manage Site-->
         <scene sceneID="dza-iU-XBQ">
             <objects>
-                <viewController id="bwG-cJ-Bgr" sceneMemberID="viewController">
+                <viewController id="bwG-cJ-Bgr" customClass="ManageSite" customModule="DatabasesProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iZC-CM-YEH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2216,6 +2211,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HX3-E9-Z2c">
                                 <rect key="frame" x="170" y="297" width="35" height="30"/>
                                 <state key="normal" title="Filter"/>
+                                <connections>
+                                    <action selector="filter:" destination="bwG-cJ-Bgr" eventType="touchUpInside" id="Sr5-eg-DT0"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eBf-aS-Utj">
                                 <rect key="frame" x="38" y="335" width="299" height="224"/>
@@ -2224,6 +2222,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68w-t7-XSB">
                                 <rect key="frame" x="292" y="598" width="45" height="30"/>
                                 <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="delete:" destination="bwG-cJ-Bgr" eventType="touchUpInside" id="LQ5-Zj-Xhd"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage Site" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPV-kv-ixS">
                                 <rect key="frame" x="132" y="45" width="95" height="21"/>
@@ -2238,12 +2239,16 @@
                                 <rect key="frame" x="38" y="598" width="46" height="30"/>
                                 <state key="normal" title="Create"/>
                                 <connections>
+                                    <action selector="create:" destination="bwG-cJ-Bgr" eventType="touchUpInside" id="sBO-cJ-3a8"/>
                                     <segue destination="nJg-2b-Bf7" kind="show" id="fBw-en-VFE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7E-vK-Paa">
                                 <rect key="frame" x="172.5" y="598" width="30" height="30"/>
                                 <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="edit:" destination="bwG-cJ-Bgr" eventType="touchUpInside" id="mqi-mE-Z5E"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUM-vm-MBh">
                                 <rect key="frame" x="201" y="187" width="142" height="118"/>
@@ -2295,6 +2300,10 @@
                         <viewLayoutGuide key="safeArea" id="ZFW-x8-gvk"/>
                     </view>
                     <connections>
+                        <outlet property="manager" destination="NIx-S1-ReQ" id="Oqz-d1-JFi"/>
+                        <outlet property="openeveryday" destination="242-7A-Xxu" id="L3Q-bO-uMT"/>
+                        <outlet property="site" destination="SUM-vm-MBh" id="cOl-PV-7OA"/>
+                        <outlet property="table" destination="eBf-aS-Utj" id="Pnb-jq-1Tj"/>
                         <segue destination="RaL-zu-3dS" kind="show" identifier="manage_to_edit_site" id="e3A-ts-S2b"/>
                     </connections>
                 </viewController>
@@ -2565,10 +2574,10 @@
             </objects>
             <point key="canvasLocation" x="6109.6000000000004" y="1523.3883058470765"/>
         </scene>
-        <!--View Controller-->
+        <!--Manage Transit-->
         <scene sceneID="bri-Pj-HI6">
             <objects>
-                <viewController id="GNy-go-b31" sceneMemberID="viewController">
+                <viewController id="GNy-go-b31" customClass="ManageTransit" customModule="DatabasesProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pjP-sb-IeF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2607,6 +2616,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4a-Ao-IPs">
                                 <rect key="frame" x="170" y="318" width="35" height="30"/>
                                 <state key="normal" title="Filter"/>
+                                <connections>
+                                    <action selector="filter:" destination="GNy-go-b31" eventType="touchUpInside" id="k4i-nb-bag"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3nk-MV-Iv1">
                                 <rect key="frame" x="38" y="356" width="299" height="224"/>
@@ -2664,17 +2676,24 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHP-Y5-zPx">
                                 <rect key="frame" x="292" y="609" width="45" height="30"/>
                                 <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deletebutton:" destination="GNy-go-b31" eventType="touchUpInside" id="3T0-4L-9fF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg6-ts-TSO">
                                 <rect key="frame" x="38" y="609" width="46" height="30"/>
                                 <state key="normal" title="Create"/>
                                 <connections>
+                                    <action selector="create:" destination="GNy-go-b31" eventType="touchUpInside" id="3ih-fN-s1k"/>
                                     <segue destination="QZq-e6-GMs" kind="show" id="8iu-Hq-RLV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="no3-i5-D4p">
                                 <rect key="frame" x="172" y="609" width="30" height="30"/>
                                 <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="edit:" destination="GNy-go-b31" eventType="touchUpInside" id="DOZ-uV-32Z"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOb-cq-S3n">
                                 <rect key="frame" x="201" y="191" width="142" height="84"/>
@@ -2740,6 +2759,16 @@
                         <viewLayoutGuide key="safeArea" id="66c-Nj-cg2"/>
                     </view>
                     <connections>
+                        <outlet property="containsite" destination="gOb-cq-S3n" id="yx9-ia-aUO"/>
+                        <outlet property="create" destination="lg6-ts-TSO" id="7J7-Hv-Ic2"/>
+                        <outlet property="deletebutton" destination="lHP-Y5-zPx" id="Jai-VL-aVa"/>
+                        <outlet property="edit" destination="no3-i5-D4p" id="APn-S7-0Pc"/>
+                        <outlet property="filter" destination="W4a-Ao-IPs" id="al1-wS-3sE"/>
+                        <outlet property="pricehigh" destination="pX4-0b-ksR" id="s8S-Im-tOV"/>
+                        <outlet property="pricelow" destination="FFH-B5-rUs" id="0I0-Y7-Xkd"/>
+                        <outlet property="route" destination="72n-KL-XgW" id="MkX-HO-0qJ"/>
+                        <outlet property="table" destination="3nk-MV-Iv1" id="RrE-8g-3ia"/>
+                        <outlet property="transporttype" destination="LDI-l1-3xD" id="Gid-kx-qPu"/>
                         <segue destination="XH5-X8-lH5" kind="show" identifier="manage_to_edit_transit" id="xtE-Xr-8tq"/>
                     </connections>
                 </viewController>
@@ -2956,10 +2985,10 @@
             </objects>
             <point key="canvasLocation" x="6109.6000000000004" y="2202.5487256371816"/>
         </scene>
-        <!--View Controller-->
+        <!--Manage Event-->
         <scene sceneID="8io-UV-bnE">
             <objects>
-                <viewController id="SUo-fV-czR" sceneMemberID="viewController">
+                <viewController id="SUo-fV-czR" customClass="ManageEvent" customModule="DatabasesProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Trh-xM-RNX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2998,6 +3027,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyB-JL-YUS">
                                 <rect key="frame" x="170" y="353" width="35" height="30"/>
                                 <state key="normal" title="Filter"/>
+                                <connections>
+                                    <action selector="filter:" destination="SUo-fV-czR" eventType="touchUpInside" id="pgE-tR-BbL"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6OC-Ck-bYJ">
                                 <rect key="frame" x="38" y="388" width="299" height="192"/>
@@ -3060,14 +3092,23 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vss-Zr-pT0">
                                 <rect key="frame" x="292" y="609" width="45" height="30"/>
                                 <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deletebutton:" destination="SUo-fV-czR" eventType="touchUpInside" id="R9m-gK-qU5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xl-Sx-MYn">
                                 <rect key="frame" x="38" y="609" width="46" height="30"/>
                                 <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="create:" destination="SUo-fV-czR" eventType="touchUpInside" id="SgW-Fj-Znm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmg-xq-BEu">
                                 <rect key="frame" x="172" y="609" width="30" height="30"/>
                                 <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="edit:" destination="SUo-fV-czR" eventType="touchUpInside" id="7lp-Eh-mOw"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eha-h8-hKf">
                                 <rect key="frame" x="178" y="320" width="79" height="30"/>
@@ -3206,6 +3247,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A4E-az-UCW"/>
                     </view>
+                    <connections>
+                        <outlet property="durationhigh" destination="ZPX-bh-zIs" id="F8E-lW-1PM"/>
+                        <outlet property="durrationlow" destination="xEZ-Cv-Xcg" id="zYn-dv-XID"/>
+                        <outlet property="enddate" destination="hVv-b4-Ivf" id="m6b-fY-Fps"/>
+                        <outlet property="keyword" destination="IpB-qG-Yup" id="ptH-ob-8Tk"/>
+                        <outlet property="name" destination="z65-lt-v1U" id="1uD-xW-TxQ"/>
+                        <outlet property="revhigh" destination="oEU-3C-1z2" id="boE-yf-dPa"/>
+                        <outlet property="revlow" destination="Eha-h8-hKf" id="qJ7-Bc-j2j"/>
+                        <outlet property="startdate" destination="Gyh-ON-FGH" id="zsh-LR-1QX"/>
+                        <outlet property="table" destination="6OC-Ck-bYJ" id="ezw-Wa-6FV"/>
+                        <outlet property="visitshigh" destination="nmN-lS-FPa" id="SUR-NO-GCY"/>
+                        <outlet property="visitslow" destination="2mo-zR-ahj" id="UZd-xr-b3q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fwh-bq-Ubx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3677,16 +3731,16 @@
             </objects>
             <point key="canvasLocation" x="6110" y="2907"/>
         </scene>
-        <!--View Controller-->
+        <!--Manage Staff-->
         <scene sceneID="YWx-wW-6fl">
             <objects>
-                <viewController id="mDR-sg-7Hi" sceneMemberID="viewController">
+                <viewController id="mDR-sg-7Hi" customClass="ManageStaff" customModule="DatabasesProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JsA-Hj-SEE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3vy-2Y-1Oh">
-                                <rect key="frame" x="99" y="201" width="260" height="119"/>
+                                <rect key="frame" x="132" y="226" width="227" height="79"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t41-XJ-J8h">
                                 <rect key="frame" x="44" y="99" width="83" height="21"/>
@@ -3729,12 +3783,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Site" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaY-Dd-TbF">
-                                <rect key="frame" x="45" y="250" width="30" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1TX-Pc-T62">
                                 <rect key="frame" x="238" y="92" width="121" height="30"/>
                                 <nil key="textColor"/>
@@ -3762,7 +3810,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ql8-ej-eCN">
                                 <rect key="frame" x="170" y="304" width="35" height="30"/>
                                 <state key="normal" title="Filter"/>
+                                <connections>
+                                    <action selector="filter:" destination="mDR-sg-7Hi" eventType="touchUpInside" id="vpy-J5-QCo"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Site" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaY-Dd-TbF">
+                                <rect key="frame" x="45" y="255" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -3771,7 +3828,7 @@
                             <constraint firstItem="nCg-Kv-DKO" firstAttribute="top" secondItem="n9a-Kk-nr0" secondAttribute="top" id="2mH-pY-eaT"/>
                             <constraint firstItem="n9a-Kk-nr0" firstAttribute="trailing" secondItem="QRR-DW-o0i" secondAttribute="trailing" constant="16" id="5Kt-xI-qdV"/>
                             <constraint firstItem="n9a-Kk-nr0" firstAttribute="trailing" secondItem="3vy-2Y-1Oh" secondAttribute="trailing" constant="16" id="8a7-yy-Hhx"/>
-                            <constraint firstItem="3vy-2Y-1Oh" firstAttribute="leading" secondItem="n9a-Kk-nr0" secondAttribute="leading" constant="99" id="9UC-zf-bea"/>
+                            <constraint firstItem="3vy-2Y-1Oh" firstAttribute="leading" secondItem="n9a-Kk-nr0" secondAttribute="leading" constant="132" id="9UC-zf-bea"/>
                             <constraint firstItem="1TX-Pc-T62" firstAttribute="leading" secondItem="t41-XJ-J8h" secondAttribute="trailing" constant="111" id="AEn-K7-Fob"/>
                             <constraint firstItem="n9a-Kk-nr0" firstAttribute="trailing" secondItem="zjz-xV-u6Z" secondAttribute="trailing" constant="16" id="B4h-fE-3N9"/>
                             <constraint firstItem="RhE-an-zlN" firstAttribute="top" secondItem="n9a-Kk-nr0" secondAttribute="top" constant="148" id="CNm-pk-2k9"/>
@@ -3790,20 +3847,20 @@
                             <constraint firstItem="n9a-Kk-nr0" firstAttribute="trailing" secondItem="zYk-aY-zlT" secondAttribute="trailing" constant="252" id="bLA-AI-bFf"/>
                             <constraint firstItem="n9a-Kk-nr0" firstAttribute="trailing" secondItem="Ql8-ej-eCN" secondAttribute="trailing" constant="170" id="eCD-X9-ZfT"/>
                             <constraint firstItem="n9a-Kk-nr0" firstAttribute="trailing" secondItem="GKp-EO-MsN" secondAttribute="trailing" constant="140" id="fER-Ry-3Wp"/>
-                            <constraint firstItem="3vy-2Y-1Oh" firstAttribute="top" secondItem="n9a-Kk-nr0" secondAttribute="top" constant="181" id="fFO-tE-IjO"/>
+                            <constraint firstItem="3vy-2Y-1Oh" firstAttribute="top" secondItem="n9a-Kk-nr0" secondAttribute="top" constant="206" id="fFO-tE-IjO"/>
                             <constraint firstItem="n9a-Kk-nr0" firstAttribute="trailing" secondItem="y6y-lj-cgJ" secondAttribute="trailing" constant="260" id="fcV-4Q-sfi"/>
                             <constraint firstItem="z1e-tg-nHA" firstAttribute="leading" secondItem="n9a-Kk-nr0" secondAttribute="leading" constant="44" id="fpL-LX-HXj"/>
                             <constraint firstItem="n9a-Kk-nr0" firstAttribute="trailing" secondItem="z1e-tg-nHA" secondAttribute="trailing" constant="249" id="h0d-5K-mt0"/>
                             <constraint firstItem="n9a-Kk-nr0" firstAttribute="trailing" secondItem="t41-XJ-J8h" secondAttribute="trailing" constant="248" id="h2p-g6-ldY"/>
                             <constraint firstItem="n9a-Kk-nr0" firstAttribute="trailing" secondItem="RhE-an-zlN" secondAttribute="trailing" constant="16" id="h4G-S2-k0Z"/>
-                            <constraint firstItem="RKe-pS-A7K" firstAttribute="top" secondItem="gaY-Dd-TbF" secondAttribute="bottom" constant="71" id="hGX-MZ-j4F"/>
+                            <constraint firstItem="RKe-pS-A7K" firstAttribute="top" secondItem="gaY-Dd-TbF" secondAttribute="bottom" constant="66" id="hGX-MZ-j4F"/>
                             <constraint firstItem="zYk-aY-zlT" firstAttribute="leading" secondItem="n9a-Kk-nr0" secondAttribute="leading" constant="45" id="ilc-22-s2g"/>
                             <constraint firstItem="n9a-Kk-nr0" firstAttribute="trailing" secondItem="1TX-Pc-T62" secondAttribute="trailing" constant="16" id="lky-r6-uTb"/>
                             <constraint firstItem="n9a-Kk-nr0" firstAttribute="trailing" secondItem="RKe-pS-A7K" secondAttribute="trailing" constant="38" id="mjZ-wK-ptl"/>
                             <constraint firstItem="n9a-Kk-nr0" firstAttribute="bottom" secondItem="RKe-pS-A7K" secondAttribute="bottom" constant="20" id="ncU-ag-Hcg"/>
-                            <constraint firstItem="RKe-pS-A7K" firstAttribute="top" secondItem="3vy-2Y-1Oh" secondAttribute="bottom" constant="22" id="owC-sc-rgE"/>
+                            <constraint firstItem="RKe-pS-A7K" firstAttribute="top" secondItem="3vy-2Y-1Oh" secondAttribute="bottom" constant="37" id="owC-sc-rgE"/>
                             <constraint firstItem="zjz-xV-u6Z" firstAttribute="leading" secondItem="n9a-Kk-nr0" secondAttribute="leading" constant="238" id="pbj-so-Yke"/>
-                            <constraint firstItem="gaY-Dd-TbF" firstAttribute="top" secondItem="y6y-lj-cgJ" secondAttribute="bottom" constant="16" id="ror-5r-gVV"/>
+                            <constraint firstItem="gaY-Dd-TbF" firstAttribute="top" secondItem="y6y-lj-cgJ" secondAttribute="bottom" constant="21" id="ror-5r-gVV"/>
                             <constraint firstItem="y6y-lj-cgJ" firstAttribute="top" secondItem="zYk-aY-zlT" secondAttribute="bottom" constant="17" id="t0Q-uD-6sG"/>
                             <constraint firstItem="RKe-pS-A7K" firstAttribute="top" secondItem="Ql8-ej-eCN" secondAttribute="bottom" constant="8" id="ujD-me-uO1"/>
                             <constraint firstItem="zjz-xV-u6Z" firstAttribute="top" secondItem="n9a-Kk-nr0" secondAttribute="top" constant="110" id="vDB-X2-hcN"/>
@@ -3813,15 +3870,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="n9a-Kk-nr0"/>
                     </view>
+                    <connections>
+                        <outlet property="enddate" destination="QRR-DW-o0i" id="lsX-XG-vi8"/>
+                        <outlet property="fname" destination="1TX-Pc-T62" id="Nw5-tr-313"/>
+                        <outlet property="lname" destination="zjz-xV-u6Z" id="u0H-xf-JKB"/>
+                        <outlet property="site" destination="3vy-2Y-1Oh" id="BMT-jx-YE3"/>
+                        <outlet property="startdate" destination="RhE-an-zlN" id="gEr-1I-NiI"/>
+                        <outlet property="table" destination="RKe-pS-A7K" id="xyw-HN-JKK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nit-Lt-uD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4560.8000000000002" y="3584.257871064468"/>
         </scene>
-        <!--View Controller-->
+        <!--Site Report-->
         <scene sceneID="3GJ-Zi-ulC">
             <objects>
-                <viewController id="0Se-NE-QXz" sceneMemberID="viewController">
+                <viewController id="0Se-NE-QXz" customClass="SiteReport" customModule="DatabasesProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jOc-IC-xl8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3864,6 +3929,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDB-aL-SbJ">
                                 <rect key="frame" x="170" y="308" width="35" height="30"/>
                                 <state key="normal" title="Filter"/>
+                                <connections>
+                                    <action selector="filter:" destination="0Se-NE-QXz" eventType="touchUpInside" id="RO0-h1-L0I"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="adg-NW-hZz">
                                 <rect key="frame" x="181" y="199" width="79" height="30"/>
@@ -3964,6 +4032,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQ8-kn-Ijf">
                                 <rect key="frame" x="149" y="607" width="77" height="30"/>
                                 <state key="normal" title="Daily Detail"/>
+                                <connections>
+                                    <action selector="dailydetail:" destination="0Se-NE-QXz" eventType="touchUpInside" id="m0P-RO-pJG"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Site Report" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McL-PC-Hh0">
                                 <rect key="frame" x="144" y="55" width="86" height="21"/>
@@ -4052,6 +4123,17 @@
                         <viewLayoutGuide key="safeArea" id="tqD-bH-sxm"/>
                     </view>
                     <connections>
+                        <outlet property="enddate" destination="A80-Gn-0Mn" id="xSY-V2-39i"/>
+                        <outlet property="eventcounthigh" destination="kSF-ew-Dye" id="oyQ-O1-0WJ"/>
+                        <outlet property="eventcountlow" destination="adg-NW-hZz" id="A1P-lc-2YO"/>
+                        <outlet property="staffcounthigh" destination="A9X-Y2-QoT" id="c8U-PG-9le"/>
+                        <outlet property="staffcountlow" destination="A9X-Y2-QoT" id="dnP-ZF-ztv"/>
+                        <outlet property="startdate" destination="1ku-ft-AcU" id="j8h-Uv-kaL"/>
+                        <outlet property="table" destination="IlW-LD-CGh" id="kZC-Bu-7p6"/>
+                        <outlet property="totalrevhigh" destination="8oN-91-6cl" id="D47-eo-uCI"/>
+                        <outlet property="totalrevlow" destination="CfK-p5-TLI" id="EPb-Jz-WZs"/>
+                        <outlet property="totalvisitshigh" destination="UGc-Dd-Odo" id="MzE-9T-uhE"/>
+                        <outlet property="totalvisitslow" destination="fBJ-VN-PBr" id="4ri-cE-lzA"/>
                         <segue destination="99S-2A-KA3" kind="show" identifier="to_daily_detail" id="CyT-fe-27u"/>
                     </connections>
                 </viewController>
@@ -4096,10 +4178,10 @@
             </objects>
             <point key="canvasLocation" x="5388" y="4263.4182908545727"/>
         </scene>
-        <!--View Controller-->
+        <!--View Schedule-->
         <scene sceneID="dUT-rD-AWw">
             <objects>
-                <viewController id="F3c-Pi-H3w" sceneMemberID="viewController">
+                <viewController id="F3c-Pi-H3w" customClass="ViewSchedule" customModule="DatabasesProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="saw-Tg-5Nf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4148,6 +4230,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98d-RK-ice">
                                 <rect key="frame" x="149.5" y="609" width="76" height="30"/>
                                 <state key="normal" title="View Event"/>
+                                <connections>
+                                    <action selector="viewevent:" destination="F3c-Pi-H3w" eventType="touchUpInside" id="NyK-It-p4p"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yeS-NM-uKG">
                                 <rect key="frame" x="238" y="92" width="121" height="30"/>
@@ -4176,6 +4261,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXr-1V-JZv">
                                 <rect key="frame" x="170" y="248" width="35" height="30"/>
                                 <state key="normal" title="Filter"/>
+                                <connections>
+                                    <action selector="filter:" destination="F3c-Pi-H3w" eventType="touchUpInside" id="JVp-aP-GfP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4221,6 +4309,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uzu-A6-BoI"/>
                     </view>
+                    <connections>
+                        <outlet property="enddate" destination="ZCM-6u-VsT" id="bXS-bb-zQ3"/>
+                        <outlet property="eventname" destination="t1h-b3-8ZG" id="X9B-sY-XEb"/>
+                        <outlet property="keyword" destination="t1h-b3-8ZG" id="AnV-aY-hwH"/>
+                        <outlet property="startdate" destination="zaF-af-s6Y" id="Sob-by-kad"/>
+                        <outlet property="table" destination="N4A-QG-V4c" id="Bmx-xB-6KC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCm-dg-e2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4383,10 +4478,10 @@
             </objects>
             <point key="canvasLocation" x="5388" y="4946.1769115442285"/>
         </scene>
-        <!--View Controller-->
+        <!--Explore Event-->
         <scene sceneID="liZ-cN-IFl">
             <objects>
-                <viewController id="uzj-XV-J3d" sceneMemberID="viewController">
+                <viewController id="uzj-XV-J3d" customClass="ExploreEvent" customModule="DatabasesProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jgb-Xq-FYY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4428,6 +4523,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gm-cZ-Cei">
                                 <rect key="frame" x="170" y="353" width="35" height="30"/>
                                 <state key="normal" title="Filter"/>
+                                <connections>
+                                    <action selector="filter:" destination="uzj-XV-J3d" eventType="touchUpInside" id="xdT-Zx-97U"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kjk-uQ-Xq6">
                                 <rect key="frame" x="38" y="388" width="299" height="192"/>
@@ -4460,10 +4558,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxo-qA-B6D">
                                 <rect key="frame" x="38" y="609" width="46" height="30"/>
                                 <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="create:" destination="uzj-XV-J3d" eventType="touchUpInside" id="0Zd-6L-cX9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBB-1L-tbx">
                                 <rect key="frame" x="146.5" y="609" width="82" height="30"/>
                                 <state key="normal" title="Event Detail"/>
+                                <connections>
+                                    <action selector="eventDetail:" destination="uzj-XV-J3d" eventType="touchUpInside" id="Lb4-ja-hId"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BSb-Oh-4Ap">
                                 <rect key="frame" x="178" y="320" width="79" height="30"/>
@@ -4528,6 +4632,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhV-lv-atc">
                                 <rect key="frame" x="292" y="609" width="45" height="30"/>
                                 <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteButton:" destination="uzj-XV-J3d" eventType="touchUpInside" id="z5w-bg-331"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4610,6 +4717,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jHU-Tw-bKH"/>
                     </view>
+                    <connections>
+                        <outlet property="enddate" destination="mIP-ra-Maa" id="Q6p-P3-HuV"/>
+                        <outlet property="keyword" destination="ztm-Ci-fDO" id="e2u-3A-LZR"/>
+                        <outlet property="name" destination="8zC-LV-i2E" id="8aa-bx-Bkh"/>
+                        <outlet property="sitename" destination="2kh-gH-xDV" id="zPU-kM-oJp"/>
+                        <outlet property="startdate" destination="8xS-Ey-xQH" id="vvh-ak-BTZ"/>
+                        <outlet property="table" destination="kjk-uQ-Xq6" id="mPg-9J-wyz"/>
+                        <outlet property="ticketPriceHigh" destination="duR-3s-spy" id="ElZ-Ss-D4m"/>
+                        <outlet property="ticketPriceLow" destination="BSb-Oh-4Ap" id="xxU-W9-lEx"/>
+                        <outlet property="visitshigh" destination="LXo-kZ-exb" id="Nw5-yJ-PRQ"/>
+                        <outlet property="visitslow" destination="9N1-g5-Q4z" id="QTI-qQ-Yyw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRZ-Fd-1of" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4762,10 +4881,10 @@
             </objects>
             <point key="canvasLocation" x="5388" y="5633"/>
         </scene>
-        <!--View Controller-->
+        <!--Explore Site-->
         <scene sceneID="xe7-Vk-UDO">
             <objects>
-                <viewController id="YGZ-qS-n0J" sceneMemberID="viewController">
+                <viewController id="YGZ-qS-n0J" customClass="ExploreSite" customModule="DatabasesProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tPn-CJ-kk1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4792,6 +4911,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IU5-iZ-JrH">
                                 <rect key="frame" x="170" y="353" width="35" height="30"/>
                                 <state key="normal" title="Filter"/>
+                                <connections>
+                                    <action selector="filter:" destination="YGZ-qS-n0J" eventType="touchUpInside" id="R3M-ax-FNs"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AMC-yv-5iA">
                                 <rect key="frame" x="38" y="388" width="299" height="192"/>
@@ -4824,6 +4946,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0np-Jj-fFl">
                                 <rect key="frame" x="38" y="609" width="70" height="30"/>
                                 <state key="normal" title="Site Detail"/>
+                                <connections>
+                                    <action selector="siteDetail:" destination="YGZ-qS-n0J" eventType="touchUpInside" id="UvU-lc-xnm"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V3j-uU-AiN">
                                 <rect key="frame" x="178" y="320" width="79" height="30"/>
@@ -4894,6 +5019,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6z-tQ-fYl">
                                 <rect key="frame" x="247" y="609" width="90" height="30"/>
                                 <state key="normal" title="Transit Detail"/>
+                                <connections>
+                                    <action selector="transitDetail:" destination="YGZ-qS-n0J" eventType="touchUpInside" id="b0Y-oZ-3aF"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Uh-5p-3qx">
                                 <rect key="frame" x="178" y="60" width="181" height="91"/>
@@ -4977,6 +5105,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VZD-Uq-vpl"/>
                     </view>
+                    <connections>
+                        <outlet property="endDate" destination="rOY-fd-M1i" id="3XH-Ld-pSS"/>
+                        <outlet property="eventCountLow" destination="V3j-uU-AiN" id="Rto-zy-XKW"/>
+                        <outlet property="eventsCountHigh" destination="WIM-EH-sxW" id="IdC-bF-88U"/>
+                        <outlet property="includeVisited" destination="CI9-Zf-5NY" id="x23-VR-yyU"/>
+                        <outlet property="openEveryday" destination="ndF-e2-IJQ" id="KAT-aW-pNX"/>
+                        <outlet property="siteName" destination="1Uh-5p-3qx" id="2x5-8p-Iqp"/>
+                        <outlet property="startDate" destination="3xa-MD-aHO" id="R5P-gx-hBz"/>
+                        <outlet property="table" destination="AMC-yv-5iA" id="ivN-8h-225"/>
+                        <outlet property="visitsHigh" destination="0WI-Dp-bKF" id="yER-Qe-0Vb"/>
+                        <outlet property="visitsLow" destination="ted-Ae-zUB" id="uEU-HJ-y6L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yoh-26-cax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5136,10 +5276,10 @@
             </objects>
             <point key="canvasLocation" x="6109.6000000000004" y="6348.5757121439283"/>
         </scene>
-        <!--View Controller-->
+        <!--Explore Event2-->
         <scene sceneID="X6D-CH-Xay">
             <objects>
-                <viewController id="FZX-hk-bTq" sceneMemberID="viewController">
+                <viewController id="FZX-hk-bTq" customClass="ExploreEvent2" customModule="DatabasesProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Hj-3F-aiS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5163,6 +5303,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwf-Po-ctH">
                                 <rect key="frame" x="170" y="353" width="35" height="30"/>
                                 <state key="normal" title="Filter"/>
+                                <connections>
+                                    <action selector="filter:" destination="FZX-hk-bTq" eventType="touchUpInside" id="mOV-7h-8g9"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5FM-hr-WkF">
                                 <rect key="frame" x="38" y="388" width="299" height="192"/>
@@ -5253,6 +5396,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FbY-uA-Dah"/>
                     </view>
+                    <connections>
+                        <outlet property="endDate" destination="EN2-Bd-822" id="Qu4-5T-XoY"/>
+                        <outlet property="name" destination="FMV-gz-QKC" id="Adi-US-BzV"/>
+                        <outlet property="siteName" destination="IEk-DC-btp" id="dhZ-wb-or3"/>
+                        <outlet property="startDate" destination="BSC-wA-WfR" id="4hY-zl-sW1"/>
+                        <outlet property="table" destination="5FM-hr-WkF" id="CGI-n4-mW5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7W-co-cLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5261,9 +5411,11 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="CyT-fe-27u"/>
+        <segue reference="xtE-Xr-8tq"/>
+        <segue reference="e3A-ts-S2b"/>
         <segue reference="T3f-Bl-4NN"/>
         <segue reference="PiC-q2-Nfh"/>
-        <segue reference="aCP-ZZ-B1U"/>
-        <segue reference="1Ii-X0-ejw"/>
+        <segue reference="oBo-ta-LQY"/>
+        <segue reference="3ym-SY-GvS"/>
     </inferredMetricsTieBreakers>
 </document>
