@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63CC49B42269121D00C70AD6 /* ManageSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49B32269121D00C70AD6 /* ManageSite.swift */; };
+		63CC49B62269136100C70AD6 /* ManageTransit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49B52269136100C70AD6 /* ManageTransit.swift */; };
+		63CC49B82269140100C70AD6 /* ManageEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49B72269140100C70AD6 /* ManageEvent.swift */; };
+		63CC49BA226914FD00C70AD6 /* ManageStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49B9226914FD00C70AD6 /* ManageStaff.swift */; };
+		63CC49BC2269158400C70AD6 /* SiteReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49BB2269158400C70AD6 /* SiteReport.swift */; };
+		63CC49BE2269164300C70AD6 /* ViewSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49BD2269164300C70AD6 /* ViewSchedule.swift */; };
+		63CC49C02269175300C70AD6 /* ExploreEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49BF2269175300C70AD6 /* ExploreEvent.swift */; };
+		63CC49C2226917F000C70AD6 /* ExploreSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49C1226917F000C70AD6 /* ExploreSite.swift */; };
+		63CC49C4226918CB00C70AD6 /* ExploreEvent2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49C3226918CB00C70AD6 /* ExploreEvent2.swift */; };
 		700D77C12257B511009FE1EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700D77C02257B511009FE1EF /* AppDelegate.swift */; };
 		700D77C32257B511009FE1EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700D77C22257B511009FE1EF /* ViewController.swift */; };
 		700D77C62257B511009FE1EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 700D77C42257B511009FE1EF /* Main.storyboard */; };
@@ -49,6 +58,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63CC49B32269121D00C70AD6 /* ManageSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageSite.swift; sourceTree = "<group>"; };
+		63CC49B52269136100C70AD6 /* ManageTransit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTransit.swift; sourceTree = "<group>"; };
+		63CC49B72269140100C70AD6 /* ManageEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageEvent.swift; sourceTree = "<group>"; };
+		63CC49B9226914FD00C70AD6 /* ManageStaff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageStaff.swift; sourceTree = "<group>"; };
+		63CC49BB2269158400C70AD6 /* SiteReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteReport.swift; sourceTree = "<group>"; };
+		63CC49BD2269164300C70AD6 /* ViewSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSchedule.swift; sourceTree = "<group>"; };
+		63CC49BF2269175300C70AD6 /* ExploreEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreEvent.swift; sourceTree = "<group>"; };
+		63CC49C1226917F000C70AD6 /* ExploreSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreSite.swift; sourceTree = "<group>"; };
+		63CC49C3226918CB00C70AD6 /* ExploreEvent2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreEvent2.swift; sourceTree = "<group>"; };
 		700D77BD2257B511009FE1EF /* DatabasesProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatabasesProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		700D77C02257B511009FE1EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		700D77C22257B511009FE1EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -131,11 +149,11 @@
 				700D77C22257B511009FE1EF /* ViewController.swift */,
 				70E066F12266558F00E8138A /* Utility.swift */,
 				70E066F3226655A200E8138A /* Model.swift */,
-				70E066E52266551C00E8138A /* Login.swift */,
 				707F25F52268FD3D0066EC03 /* User.swift */,
 				707F25F72268FDE70066EC03 /* Visitor.swift */,
 				707F25F92268FF010066EC03 /* Employee.swift */,
 				707F25FB226905800066EC03 /* EmployeeVisitor.swift */,
+				70E066E52266551C00E8138A /* Login.swift */,
 				70E066F52266782900E8138A /* Navigation.swift */,
 				70E066E72266552D00E8138A /* RegisterNavigation.swift */,
 				70E066F722667C6500E8138A /* EmailCell.swift */,
@@ -143,6 +161,15 @@
 				70E066EB2266554C00E8138A /* RegisterVisitor.swift */,
 				70E066ED2266555D00E8138A /* RegisterEmployee.swift */,
 				70E066EF2266556A00E8138A /* RegisterEmployeeVisitor.swift */,
+				63CC49B32269121D00C70AD6 /* ManageSite.swift */,
+				63CC49B52269136100C70AD6 /* ManageTransit.swift */,
+				63CC49B72269140100C70AD6 /* ManageEvent.swift */,
+				63CC49B9226914FD00C70AD6 /* ManageStaff.swift */,
+				63CC49BB2269158400C70AD6 /* SiteReport.swift */,
+				63CC49BD2269164300C70AD6 /* ViewSchedule.swift */,
+				63CC49BF2269175300C70AD6 /* ExploreEvent.swift */,
+				63CC49C1226917F000C70AD6 /* ExploreSite.swift */,
+				63CC49C3226918CB00C70AD6 /* ExploreEvent2.swift */,
 				700D77C42257B511009FE1EF /* Main.storyboard */,
 				700D77CA2257B513009FE1EF /* Assets.xcassets */,
 				700D77CC2257B513009FE1EF /* LaunchScreen.storyboard */,
@@ -301,16 +328,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63CC49BA226914FD00C70AD6 /* ManageStaff.swift in Sources */,
 				707F25FC226905800066EC03 /* EmployeeVisitor.swift in Sources */,
+				63CC49B42269121D00C70AD6 /* ManageSite.swift in Sources */,
 				70E066F22266558F00E8138A /* Utility.swift in Sources */,
 				700D77C92257B511009FE1EF /* DatabasesProject.xcdatamodeld in Sources */,
+				63CC49C4226918CB00C70AD6 /* ExploreEvent2.swift in Sources */,
 				70E066EA2266553E00E8138A /* RegisterUser.swift in Sources */,
+				63CC49BC2269158400C70AD6 /* SiteReport.swift in Sources */,
 				70E066F62266782900E8138A /* Navigation.swift in Sources */,
 				70E066F02266556A00E8138A /* RegisterEmployeeVisitor.swift in Sources */,
 				70E066E82266552D00E8138A /* RegisterNavigation.swift in Sources */,
+				63CC49B62269136100C70AD6 /* ManageTransit.swift in Sources */,
 				707F25F62268FD3D0066EC03 /* User.swift in Sources */,
 				700D77C32257B511009FE1EF /* ViewController.swift in Sources */,
+				63CC49BE2269164300C70AD6 /* ViewSchedule.swift in Sources */,
 				700D77C12257B511009FE1EF /* AppDelegate.swift in Sources */,
+				63CC49C2226917F000C70AD6 /* ExploreSite.swift in Sources */,
 				707F25FA2268FF010066EC03 /* Employee.swift in Sources */,
 				70E066F822667C6500E8138A /* EmailCell.swift in Sources */,
 				70E066E62266551C00E8138A /* Login.swift in Sources */,
@@ -318,6 +352,8 @@
 				70E066EE2266555D00E8138A /* RegisterEmployee.swift in Sources */,
 				707F25F82268FDE70066EC03 /* Visitor.swift in Sources */,
 				70E066EC2266554C00E8138A /* RegisterVisitor.swift in Sources */,
+				63CC49C02269175300C70AD6 /* ExploreEvent.swift in Sources */,
+				63CC49B82269140100C70AD6 /* ManageEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
