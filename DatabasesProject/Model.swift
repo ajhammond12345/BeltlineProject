@@ -92,6 +92,7 @@ class Model: NSObject {
     private var managers: [Employee] = []
     private var staff: [Employee] = []
     private var filteredStaff: [Employee] = []
+    private var schedule: [Event] = []
     
     func getManagers() -> [Employee] {
         //TODO: load managers
@@ -106,9 +107,18 @@ class Model: NSObject {
         return filteredStaff
     }
     
+    func getSchedule() -> [Event] {
+        return schedule
+    }
+    
     func filterStaff(fname: String?, lname: String?, startDate: String?, endDate: String?) {
         //TODO: Filter staff
     }
+    
+    func filterSchedule(staff: Employee, eventName: String?, keyword: String?, startDate: String?, endDate: String?) {
+        //TODO: Filter assigned, save to schedule
+    }
+    
     
     
     
@@ -127,7 +137,7 @@ class Model: NSObject {
         return filteredEvents
     }
     
-    func filterEvents(site: Site?, name: String?, keywoard: String?, startDate: String?, endDate: String?, durationStart: String?, durationEnd: String?, visitsStart: String?, visitsEnd: String?, revenueStart: String?, revenueEnd: String?, staffCountLow: String?, staffCountHigh: String?, eventCountLow: String?, eventCountHigh: String?) {
+    func filterEvents(site: Site?, name: String?, keywoard: String?, startDate: String?, endDate: String?, durationStart: String?, durationEnd: String?, visitsStart: String?, visitsEnd: String?, revenueStart: String?, revenueEnd: String?, staffCountLow: String?, staffCountHigh: String?, eventCountLow: String?, eventCountHigh: String?, priceLow: String?, priceHigh: String?) {
         //TODO filter sites
     }
     
@@ -150,6 +160,7 @@ class Model: NSObject {
     //Site Stuff
     private var sites: [Site] = []
     private var filteredSites: [Site] = []
+    private var exploreFilteredSites: [Site] = []
     
     func getSites() -> [Site] {
         //TODO: load sites
@@ -160,8 +171,16 @@ class Model: NSObject {
         return filteredSites
     }
     
+    func getExploreFilteredSites() -> [Site] {
+        return exploreFilteredSites
+    }
+    
     func filterSites(open: Bool, manager: Employee?, site: Site?) {
         //TODO filter sites
+    }
+    
+    func exploreSites(site: Site?, startDate: String?, endDate: String?, openEveryday: Bool, includeVisited: Bool, visitsLow: String?, visitsHigh: String?, eventCountLow: String?, eventCountHigh: String?) {
+        //TODO explore sites
     }
     
     func createSite(site: Site) {
@@ -205,6 +224,27 @@ class Model: NSObject {
     }
     
     func deleteTransit(transit: Transit) {
+        
+    }
+    
+    
+    
+    
+    //Visit Stuff
+    var visits: [Visit] = []
+    var filteredVisits: [Visit] = []
+    
+    func getVisits() -> [Visit] {
+        return visits
+    }
+    
+    func getFilteredVisits() -> [Visit] {
+        return filteredVisits
+    }
+    
+    func filterVisits(visitor: Visitor?, name: String?, startDate: String?, endDate: String?, site: Site?) {
+    
+        //TODO: filter visits
         
     }
 }

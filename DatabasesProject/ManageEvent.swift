@@ -18,6 +18,10 @@ class ManageEvent: UIViewController, UITableViewDelegate, UITableViewDataSource 
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedEvent = events[indexPath.row]
+    }
+    
     
     var events: [Event] = []
     var selectedEvent: Event?
@@ -36,7 +40,7 @@ class ManageEvent: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     @IBAction func filter(_ sender: Any) {
         let employee: Employee = Model.getInstance().getCurrentUser() as! Employee
-        Model.getInstance().filterEvents(site: employee.getSite(), name: name.text, keywoard: keyword.text, startDate: startdate.text, endDate: enddate.text, durationStart: durrationlow.text, durationEnd: durationhigh.text, visitsStart: visitslow.text, visitsEnd: visitshigh.text, revenueStart: revlow.text, revenueEnd: revhigh.text, staffCountLow: nil, staffCountHigh: nil, eventCountLow: nil, eventCountHigh: nil)
+        Model.getInstance().filterEvents(site: employee.getSite(), name: name.text, keywoard: keyword.text, startDate: startdate.text, endDate: enddate.text, durationStart: durrationlow.text, durationEnd: durationhigh.text, visitsStart: visitslow.text, visitsEnd: visitshigh.text, revenueStart: revlow.text, revenueEnd: revhigh.text, staffCountLow: nil, staffCountHigh: nil, eventCountLow: nil, eventCountHigh: nil, priceLow: nil, priceHigh: nil)
         events = Model.getInstance().getFilteredEvents()
         table.reloadData()
         
@@ -67,7 +71,7 @@ class ManageEvent: UIViewController, UITableViewDelegate, UITableViewDataSource 
         table.delegate = self
         table.dataSource = self
         let employee: Employee = Model.getInstance().getCurrentUser() as! Employee
-        Model.getInstance().filterEvents(site: employee.getSite(), name: nil, keywoard: nil, startDate: nil, endDate: nil, durationStart: nil, durationEnd: nil, visitsStart: nil, visitsEnd: nil, revenueStart: nil, revenueEnd: nil, staffCountLow: nil, staffCountHigh: nil, eventCountLow: nil, eventCountHigh: nil)
+        Model.getInstance().filterEvents(site: employee.getSite(), name: nil, keywoard: nil, startDate: nil, endDate: nil, durationStart: nil, durationEnd: nil, visitsStart: nil, visitsEnd: nil, revenueStart: nil, revenueEnd: nil, staffCountLow: nil, staffCountHigh: nil, eventCountLow: nil, eventCountHigh: nil, priceLow: nil, priceHigh: nil)
         events = Model.getInstance().getFilteredEvents()
         // Do any additional setup after loading the view.
     }

@@ -41,6 +41,10 @@ class ManageTransit: UIViewController, UITableViewDataSource, UITableViewDelegat
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedTransit = transits[indexPath.row]
+    }
+    
     
     
 
@@ -85,7 +89,9 @@ class ManageTransit: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        table.delegate = self
+        table.dataSource = self
+        //TODO: Load in the lists
 
         // Do any additional setup after loading the view.
     }

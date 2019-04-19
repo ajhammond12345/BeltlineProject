@@ -22,6 +22,10 @@ class ManageSite: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedSite = filteredSites[indexPath.row]
+    }
+    
     
     var managers: [Employee] = []
     var managerSelected: Employee?
