@@ -15,7 +15,6 @@
 		63CC49BE2269164300C70AD6 /* ViewSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49BD2269164300C70AD6 /* ViewSchedule.swift */; };
 		63CC49C02269175300C70AD6 /* ExploreEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49BF2269175300C70AD6 /* ExploreEvent.swift */; };
 		63CC49C2226917F000C70AD6 /* ExploreSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49C1226917F000C70AD6 /* ExploreSite.swift */; };
-		63CC49C4226918CB00C70AD6 /* ExploreEvent2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49C3226918CB00C70AD6 /* ExploreEvent2.swift */; };
 		63CC49C62269196F00C70AD6 /* CreateSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49C52269196F00C70AD6 /* CreateSite.swift */; };
 		63CC49C8226919D000C70AD6 /* CreateTransit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49C7226919D000C70AD6 /* CreateTransit.swift */; };
 		63CC49CA22691A1700C70AD6 /* ViewEditEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49C922691A1700C70AD6 /* ViewEditEvent.swift */; };
@@ -39,6 +38,12 @@
 		707F25F82268FDE70066EC03 /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F25F72268FDE70066EC03 /* Visitor.swift */; };
 		707F25FA2268FF010066EC03 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F25F92268FF010066EC03 /* Employee.swift */; };
 		707F25FC226905800066EC03 /* EmployeeVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F25FB226905800066EC03 /* EmployeeVisitor.swift */; };
+		707F25FE2269119C0066EC03 /* ManagerUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F25FD2269119C0066EC03 /* ManagerUser.swift */; };
+		707F260022691B3E0066EC03 /* Site.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F25FF22691B3E0066EC03 /* Site.swift */; };
+		707F2602226932AE0066EC03 /* Transit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F2601226932AE0066EC03 /* Transit.swift */; };
+		707F2604226932BD0066EC03 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F2603226932BD0066EC03 /* Event.swift */; };
+		708C3863226A2FAC00786BC9 /* VisitHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708C3862226A2FAC00786BC9 /* VisitHistory.swift */; };
+		708C3865226A306200786BC9 /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708C3864226A306200786BC9 /* Visit.swift */; };
 		70E066E62266551C00E8138A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E066E52266551C00E8138A /* Login.swift */; };
 		70E066E82266552D00E8138A /* RegisterNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E066E72266552D00E8138A /* RegisterNavigation.swift */; };
 		70E066EA2266553E00E8138A /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E066E92266553E00E8138A /* RegisterUser.swift */; };
@@ -77,7 +82,6 @@
 		63CC49BD2269164300C70AD6 /* ViewSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSchedule.swift; sourceTree = "<group>"; };
 		63CC49BF2269175300C70AD6 /* ExploreEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreEvent.swift; sourceTree = "<group>"; };
 		63CC49C1226917F000C70AD6 /* ExploreSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreSite.swift; sourceTree = "<group>"; };
-		63CC49C3226918CB00C70AD6 /* ExploreEvent2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreEvent2.swift; sourceTree = "<group>"; };
 		63CC49C52269196F00C70AD6 /* CreateSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSite.swift; sourceTree = "<group>"; };
 		63CC49C7226919D000C70AD6 /* CreateTransit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTransit.swift; sourceTree = "<group>"; };
 		63CC49C922691A1700C70AD6 /* ViewEditEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewEditEvent.swift; sourceTree = "<group>"; };
@@ -107,6 +111,12 @@
 		707F25F72268FDE70066EC03 /* Visitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visitor.swift; sourceTree = "<group>"; };
 		707F25F92268FF010066EC03 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		707F25FB226905800066EC03 /* EmployeeVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeVisitor.swift; sourceTree = "<group>"; };
+		707F25FD2269119C0066EC03 /* ManagerUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerUser.swift; sourceTree = "<group>"; };
+		707F25FF22691B3E0066EC03 /* Site.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Site.swift; sourceTree = "<group>"; };
+		707F2601226932AE0066EC03 /* Transit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transit.swift; sourceTree = "<group>"; };
+		707F2603226932BD0066EC03 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		708C3862226A2FAC00786BC9 /* VisitHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitHistory.swift; sourceTree = "<group>"; };
+		708C3864226A306200786BC9 /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
 		70E066E52266551C00E8138A /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		70E066E72266552D00E8138A /* RegisterNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNavigation.swift; sourceTree = "<group>"; };
 		70E066E92266553E00E8138A /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
@@ -173,6 +183,10 @@
 				70E066F3226655A200E8138A /* Model.swift */,
 				707F25F52268FD3D0066EC03 /* User.swift */,
 				707F25F72268FDE70066EC03 /* Visitor.swift */,
+				707F25FF22691B3E0066EC03 /* Site.swift */,
+				708C3864226A306200786BC9 /* Visit.swift */,
+				707F2601226932AE0066EC03 /* Transit.swift */,
+				707F2603226932BD0066EC03 /* Event.swift */,
 				707F25F92268FF010066EC03 /* Employee.swift */,
 				707F25FB226905800066EC03 /* EmployeeVisitor.swift */,
 				70E066E52266551C00E8138A /* Login.swift */,
@@ -183,6 +197,7 @@
 				70E066EB2266554C00E8138A /* RegisterVisitor.swift */,
 				70E066ED2266555D00E8138A /* RegisterEmployee.swift */,
 				70E066EF2266556A00E8138A /* RegisterEmployeeVisitor.swift */,
+				707F25FD2269119C0066EC03 /* ManagerUser.swift */,
 				63CC49B32269121D00C70AD6 /* ManageSite.swift */,
 				63CC49B52269136100C70AD6 /* ManageTransit.swift */,
 				63CC49B72269140100C70AD6 /* ManageEvent.swift */,
@@ -191,7 +206,7 @@
 				63CC49BD2269164300C70AD6 /* ViewSchedule.swift */,
 				63CC49BF2269175300C70AD6 /* ExploreEvent.swift */,
 				63CC49C1226917F000C70AD6 /* ExploreSite.swift */,
-				63CC49C3226918CB00C70AD6 /* ExploreEvent2.swift */,
+				708C3862226A2FAC00786BC9 /* VisitHistory.swift */,
 				63CC49C52269196F00C70AD6 /* CreateSite.swift */,
 				63CC49C7226919D000C70AD6 /* CreateTransit.swift */,
 				63CC49C922691A1700C70AD6 /* ViewEditEvent.swift */,
@@ -366,10 +381,11 @@
 				63CC49D022691B7500C70AD6 /* CreateEvent.swift in Sources */,
 				63CC49B42269121D00C70AD6 /* ManageSite.swift in Sources */,
 				70E066F22266558F00E8138A /* Utility.swift in Sources */,
+				707F2604226932BD0066EC03 /* Event.swift in Sources */,
 				63CC49CC22691A7200C70AD6 /* EditSite.swift in Sources */,
 				63CC49D622691FD600C70AD6 /* EventDetail2.swift in Sources */,
 				700D77C92257B511009FE1EF /* DatabasesProject.xcdatamodeld in Sources */,
-				63CC49C4226918CB00C70AD6 /* ExploreEvent2.swift in Sources */,
+				707F2602226932AE0066EC03 /* Transit.swift in Sources */,
 				70E066EA2266553E00E8138A /* RegisterUser.swift in Sources */,
 				63CC49D222691C7A00C70AD6 /* DailyDetail.swift in Sources */,
 				63CC49CE22691B1E00C70AD6 /* EditTransit.swift in Sources */,
@@ -382,6 +398,7 @@
 				63CC49B62269136100C70AD6 /* ManageTransit.swift in Sources */,
 				707F25F62268FD3D0066EC03 /* User.swift in Sources */,
 				700D77C32257B511009FE1EF /* ViewController.swift in Sources */,
+				707F260022691B3E0066EC03 /* Site.swift in Sources */,
 				63CC49BE2269164300C70AD6 /* ViewSchedule.swift in Sources */,
 				700D77C12257B511009FE1EF /* AppDelegate.swift in Sources */,
 				63CC49C2226917F000C70AD6 /* ExploreSite.swift in Sources */,
@@ -392,12 +409,15 @@
 				70E066E62266551C00E8138A /* Login.swift in Sources */,
 				63CC49DA2269220800C70AD6 /* SiteDetail.swift in Sources */,
 				70E066F4226655A200E8138A /* Model.swift in Sources */,
+				707F25FE2269119C0066EC03 /* ManagerUser.swift in Sources */,
 				70E066EE2266555D00E8138A /* RegisterEmployee.swift in Sources */,
+				708C3863226A2FAC00786BC9 /* VisitHistory.swift in Sources */,
 				63CC49D422691EEF00C70AD6 /* EventDetail.swift in Sources */,
 				707F25F82268FDE70066EC03 /* Visitor.swift in Sources */,
 				70E066EC2266554C00E8138A /* RegisterVisitor.swift in Sources */,
 				63CC49C02269175300C70AD6 /* ExploreEvent.swift in Sources */,
 				63CC49B82269140100C70AD6 /* ManageEvent.swift in Sources */,
+				708C3865226A306200786BC9 /* Visit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,45 @@
 
 import UIKit
 
-class ManageTransit: UIViewController {
+class ManageTransit: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    var transportTypes: [String] = []
+    var selectedTransport: String?
+    var sites: [Site] = []
+    var selectedSite: Site?
+    var transits: [Transit] = []
+    var selectedTransit: Transit?
+    
+    
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView.tag == 1 { // transport types
+            return transportTypes.count
+        } else {
+            return sites.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return transits.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //TODO: Create cell
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedTransit = transits[indexPath.row]
+    }
+    
+    
+    
 
     @IBOutlet weak var route: UITextField!
     @IBOutlet weak var transporttype: UIPickerView!
@@ -17,6 +55,14 @@ class ManageTransit: UIViewController {
     @IBOutlet weak var pricehigh: UITextField!
     
     @IBAction func filter(_ sender: Any) {
+        if pricelow.text != nil || pricehigh.text != nil {
+            
+        }
+        Model.getInstance().filterTransits(route: route.text, transportType: selectedTransport, site: selectedSite, priceLow: pricelow!.text, priceHigh: pricehigh!.text)
+            
+        transits = Model.getInstance().getFilteredTransits()
+        table.reloadData()
+
     }
 
     @IBOutlet weak var table: UITableView!
@@ -24,12 +70,28 @@ class ManageTransit: UIViewController {
     @IBAction func create(_ sender: Any) {
     }
     @IBAction func edit(_ sender: Any) {
+        performSegue(withIdentifier: "manage_to_edit_transit", sender: self)
     }
     @IBAction func deletebutton(_ sender: Any) {
+        print("Deleting Transit")
+        if (selectedTransit != nil) {
+            Model.getInstance().deleteTransit(transit: selectedTransit!)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //TODO
+       /* if segue.destination is EditTransit {
+            let dest = segue.destination as? EditTransit
+            dest?.transit = selectedTransit
+        }*/
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        table.delegate = self
+        table.dataSource = self
+        //TODO: Load in the lists
 
         // Do any additional setup after loading the view.
     }

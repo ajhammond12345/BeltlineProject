@@ -1,23 +1,18 @@
 //
-//  ExploreEvent2.swift
+//  ManagerUser.swift
 //  DatabasesProject
 //
-//  Created by Cole Kibler on 4/18/19.
+//  Created by Alexander Hammond on 4/18/19.
 //  Copyright © 2019 Team24. All rights reserved.
 //
 
 import UIKit
 
-class ExploreEvent2: UIViewController {
+class ManagerUser: UIViewController {
 
-    @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var startDate: UITextField!
-    @IBOutlet weak var endDate: UITextField!
-    @IBOutlet weak var siteName: UIPickerView!
-    
-    @IBAction func filter(_ sender: Any) {
-    }
-    @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var type: UIPickerView!
+    @IBOutlet weak var status: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

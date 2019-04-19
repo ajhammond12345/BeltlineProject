@@ -8,7 +8,17 @@
 
 import UIKit
 
-class SiteReport: UIViewController {
+class SiteReport: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return events.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //TODO: Create cell
+        return UITableViewCell()
+    }
+    
+    var events: [Event] = []
 
     @IBOutlet weak var startdate: UITextField!
     @IBOutlet weak var enddate: UITextField!
@@ -22,15 +32,25 @@ class SiteReport: UIViewController {
     @IBOutlet weak var totalrevhigh: UITextField!
     
     @IBAction func filter(_ sender: Any) {
+        let employee: Employee = Model.getInstance().getCurrentUser() as! Employee
+        Model.getInstance().filterEvents(site: employee.getSite(), name: nil, keywoard: nil, startDate: startdate.text, endDate: enddate.text, durationStart: nil, durationEnd: nil, visitsStart: totalvisitslow.text, visitsEnd: totalvisitshigh.text, revenueStart: totalrevlow.text, revenueEnd: totalrevhigh.text, staffCountLow: staffcountlow.text, staffCountHigh: staffcounthigh.text, eventCountLow: eventcountlow.text, eventCountHigh: eventcounthigh.text, priceLow: nil, priceHigh: nil)
+        events = Model.getInstance().getFilteredEvents()
+        table.reloadData()
     }
     
     @IBOutlet weak var table: UITableView!
     
     @IBAction func dailydetail(_ sender: Any) {
+        performSegue(withIdentifier: "to_daily_detail", sender: self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        table.delegate = self
+        table.dataSource = self
+        let employee: Employee = Model.getInstance().getCurrentUser() as! Employee
+        Model.getInstance().filterEvents(site: employee.getSite(), name: nil, keywoard: nil, startDate: nil, endDate: nil, durationStart: nil, durationEnd: nil, visitsStart: nil, visitsEnd: nil, revenueStart: nil, revenueEnd: nil, staffCountLow: nil, staffCountHigh: nil, eventCountLow: nil, eventCountHigh: nil, priceLow: nil, priceHigh: nil)
+        events = Model.getInstance().getFilteredEvents()
 
         // Do any additional setup after loading the view.
     }
