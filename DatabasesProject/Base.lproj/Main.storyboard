@@ -880,7 +880,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Some Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="025-c5-ex0">
-                                                    <rect key="frame" x="42" y="11" width="157" height="21"/>
+                                                    <rect key="frame" x="42" y="12" width="157" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -3331,6 +3331,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzx-bb-ogH">
                                         <rect key="frame" x="167" y="604" width="35" height="30"/>
                                         <state key="normal" title="Filter"/>
+                                        <connections>
+                                            <action selector="filter:" destination="gIO-X8-3L9" eventType="touchUpInside" id="uOr-4k-1ie"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UeC-cz-7Qh">
                                         <rect key="frame" x="179" y="533" width="79" height="30"/>
@@ -3568,8 +3571,19 @@
                         <viewLayoutGuide key="safeArea" id="me4-kb-kgb"/>
                     </view>
                     <connections>
+                        <outlet property="capacity" destination="l1x-fC-YXX" id="WOw-kN-YAp"/>
+                        <outlet property="dailyRevLow" destination="l1x-fC-YXX" id="0NQ-Cm-S68"/>
+                        <outlet property="dailyRevRange" destination="l1x-fC-YXX" id="cO7-UY-1Xo"/>
+                        <outlet property="dailyVisitsHigh" destination="l1x-fC-YXX" id="cLr-rg-Oar"/>
+                        <outlet property="dailyVisitsLow" destination="l1x-fC-YXX" id="5fq-K8-bqQ"/>
+                        <outlet property="desc" destination="l1x-fC-YXX" id="nC1-yb-WfU"/>
                         <outlet property="description" destination="l1x-fC-YXX" id="f4C-Fw-MQI"/>
-                        <outlet property="table" destination="l1x-fC-YXX" id="G2i-o8-BgN"/>
+                        <outlet property="endDate" destination="l1x-fC-YXX" id="ewE-2H-A07"/>
+                        <outlet property="minStaffReq" destination="l1x-fC-YXX" id="YCd-Hd-f8h"/>
+                        <outlet property="naem" destination="l1x-fC-YXX" id="rJa-BS-0OH"/>
+                        <outlet property="price" destination="l1x-fC-YXX" id="gqc-kq-7e6"/>
+                        <outlet property="startDate" destination="l1x-fC-YXX" id="a5c-e9-95f"/>
+                        <outlet property="table" destination="l1x-fC-YXX" id="0sF-9v-Bze"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohG-et-g6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -5634,7 +5648,7 @@
         <segue reference="SRM-qm-Twx"/>
         <segue reference="T3f-Bl-4NN"/>
         <segue reference="PiC-q2-Nfh"/>
-        <segue reference="oBo-ta-LQY"/>
-        <segue reference="3ym-SY-GvS"/>
+        <segue reference="aCP-ZZ-B1U"/>
+        <segue reference="1Ii-X0-ejw"/>
     </inferredMetricsTieBreakers>
 </document>
