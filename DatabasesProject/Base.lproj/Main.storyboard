@@ -684,7 +684,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="SeE-oA-irJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="email" id="SeE-oA-irJ" customClass="EmailCell" customModule="DatabasesProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="259" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SeE-oA-irJ" id="gcw-nt-V4h">
@@ -700,6 +700,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="email" destination="OjA-aB-3YA" id="Nr7-g5-gS8"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -728,10 +731,10 @@
             </objects>
             <point key="canvasLocation" x="1950" y="-551"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Employee-->
         <scene sceneID="frj-Om-vgv">
             <objects>
-                <viewController id="N4K-Bw-yls" sceneMemberID="viewController">
+                <viewController id="N4K-Bw-yls" customClass="RegisterEmployee" customModule="DatabasesProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bct-6y-5WM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2442,8 +2445,8 @@
                         <viewLayoutGuide key="safeArea" id="zcZ-yN-UD9"/>
                     </view>
                     <connections>
-                        <outlet property="address" destination="82g-lB-k8n" id="wfF-lb-Dsf"/>
-                        <outlet property="manager" destination="82g-lB-k8n" id="Msl-71-hHq"/>
+                        <outlet property="address" destination="zCj-Hg-20x" id="e8E-up-pmN"/>
+                        <outlet property="manager" destination="82g-lB-k8n" id="btb-PJ-h0D"/>
                         <outlet property="name" destination="h2i-Qc-QhY" id="5uS-Po-n5v"/>
                         <outlet property="openEveryday" destination="Xbz-M4-8Ph" id="5Qn-0a-jJF"/>
                         <outlet property="zip" destination="Ygu-Av-uhm" id="xyb-i0-KfA"/>
@@ -3574,7 +3577,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohG-et-g6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5388" y="2907"/>
+            <point key="canvasLocation" x="6110" y="2907"/>
         </scene>
         <!--Create Event-->
         <scene sceneID="flW-67-yeq">
@@ -3781,7 +3784,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4R-U9-Tnt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6110" y="2907"/>
+            <point key="canvasLocation" x="5388" y="2907"/>
         </scene>
         <!--Manage Staff-->
         <scene sceneID="YWx-wW-6fl">
@@ -5619,7 +5622,7 @@
         <segue reference="tnx-es-COs"/>
         <segue reference="T3f-Bl-4NN"/>
         <segue reference="PiC-q2-Nfh"/>
-        <segue reference="aCP-ZZ-B1U"/>
-        <segue reference="1Ii-X0-ejw"/>
+        <segue reference="Zll-sX-6OS"/>
+        <segue reference="3ym-SY-GvS"/>
     </inferredMetricsTieBreakers>
 </document>

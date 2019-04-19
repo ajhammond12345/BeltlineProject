@@ -200,6 +200,7 @@ class Model: NSObject {
     
     
     //Transit Stuff
+    private var transportTypes = ["Bike", "Bus", "MARTA"]
     private var transits: [Transit] = []
     private var filteredTransits: [Transit] = []
     
@@ -209,6 +210,10 @@ class Model: NSObject {
     
     func getFilteredTransits() -> [Transit] {
         return filteredTransits
+    }
+    
+    func getTransportTypes() -> [String] {
+        return transportTypes
     }
     
     func filterTransits(route: String?, transportType: String?, site: Site?, priceLow: String?, priceHigh: String?) {
