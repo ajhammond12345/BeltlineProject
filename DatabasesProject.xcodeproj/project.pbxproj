@@ -16,6 +16,16 @@
 		632688CD226A5AED001BCC31 /* ManageStaffCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632688CC226A5AED001BCC31 /* ManageStaffCell.swift */; };
 		632688CF226A60A8001BCC31 /* SiteReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632688CE226A60A8001BCC31 /* SiteReportCell.swift */; };
 		632688D1226A61C3001BCC31 /* ViewScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632688D0226A61C3001BCC31 /* ViewScheduleCell.swift */; };
+		632688D3226A64BF001BCC31 /* ExploreEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632688D2226A64BF001BCC31 /* ExploreEventCell.swift */; };
+		632688D5226A656D001BCC31 /* ExploreSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632688D4226A656D001BCC31 /* ExploreSiteCell.swift */; };
+		632688D7226A665D001BCC31 /* VisitHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632688D6226A665D001BCC31 /* VisitHistoryCell.swift */; };
+		632688DB226A68FF001BCC31 /* ConnectedSites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632688DA226A68FF001BCC31 /* ConnectedSites.swift */; };
+		632688DD226A6958001BCC31 /* StaffAssigned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632688DC226A6958001BCC31 /* StaffAssigned.swift */; };
+		632688DF226A6AA5001BCC31 /* TakeTransit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632688DE226A6AA5001BCC31 /* TakeTransit.swift */; };
+		632688E1226A6B83001BCC31 /* ViewTransitHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632688E0226A6B83001BCC31 /* ViewTransitHistory.swift */; };
+		632688E3226A6BFE001BCC31 /* ManageProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632688E2226A6BFE001BCC31 /* ManageProfile.swift */; };
+		632688E5226A6D8F001BCC31 /* DailyDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632688E4226A6D8F001BCC31 /* DailyDetailCell.swift */; };
+		632688E7226A6F07001BCC31 /* TransitDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632688E6226A6F07001BCC31 /* TransitDetailCell.swift */; };
 		63CC49B42269121D00C70AD6 /* ManageSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49B32269121D00C70AD6 /* ManageSite.swift */; };
 		63CC49B62269136100C70AD6 /* ManageTransit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49B52269136100C70AD6 /* ManageTransit.swift */; };
 		63CC49B82269140100C70AD6 /* ManageEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49B72269140100C70AD6 /* ManageEvent.swift */; };
@@ -92,6 +102,16 @@
 		632688CC226A5AED001BCC31 /* ManageStaffCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageStaffCell.swift; sourceTree = "<group>"; };
 		632688CE226A60A8001BCC31 /* SiteReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteReportCell.swift; sourceTree = "<group>"; };
 		632688D0226A61C3001BCC31 /* ViewScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewScheduleCell.swift; sourceTree = "<group>"; };
+		632688D2226A64BF001BCC31 /* ExploreEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreEventCell.swift; sourceTree = "<group>"; };
+		632688D4226A656D001BCC31 /* ExploreSiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreSiteCell.swift; sourceTree = "<group>"; };
+		632688D6226A665D001BCC31 /* VisitHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitHistoryCell.swift; sourceTree = "<group>"; };
+		632688DA226A68FF001BCC31 /* ConnectedSites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedSites.swift; sourceTree = "<group>"; };
+		632688DC226A6958001BCC31 /* StaffAssigned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffAssigned.swift; sourceTree = "<group>"; };
+		632688DE226A6AA5001BCC31 /* TakeTransit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeTransit.swift; sourceTree = "<group>"; };
+		632688E0226A6B83001BCC31 /* ViewTransitHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTransitHistory.swift; sourceTree = "<group>"; };
+		632688E2226A6BFE001BCC31 /* ManageProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageProfile.swift; sourceTree = "<group>"; };
+		632688E4226A6D8F001BCC31 /* DailyDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDetailCell.swift; sourceTree = "<group>"; };
+		632688E6226A6F07001BCC31 /* TransitDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitDetailCell.swift; sourceTree = "<group>"; };
 		63CC49B32269121D00C70AD6 /* ManageSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageSite.swift; sourceTree = "<group>"; };
 		63CC49B52269136100C70AD6 /* ManageTransit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTransit.swift; sourceTree = "<group>"; };
 		63CC49B72269140100C70AD6 /* ManageEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageEvent.swift; sourceTree = "<group>"; };
@@ -234,13 +254,23 @@
 				63CC49C1226917F000C70AD6 /* ExploreSite.swift */,
 				708C3862226A2FAC00786BC9 /* VisitHistory.swift */,
 				632688D0226A61C3001BCC31 /* ViewScheduleCell.swift */,
+				632688D2226A64BF001BCC31 /* ExploreEventCell.swift */,
 				63CC49C52269196F00C70AD6 /* CreateSite.swift */,
 				63CC49C7226919D000C70AD6 /* CreateTransit.swift */,
+				632688D4226A656D001BCC31 /* ExploreSiteCell.swift */,
+				632688E0226A6B83001BCC31 /* ViewTransitHistory.swift */,
+				632688DE226A6AA5001BCC31 /* TakeTransit.swift */,
+				632688E2226A6BFE001BCC31 /* ManageProfile.swift */,
+				632688DA226A68FF001BCC31 /* ConnectedSites.swift */,
 				63CC49CF22691B7500C70AD6 /* CreateEvent.swift */,
 				63CC49CB22691A7200C70AD6 /* EditSite.swift */,
+				632688DC226A6958001BCC31 /* StaffAssigned.swift */,
 				63CC49CD22691B1E00C70AD6 /* EditTransit.swift */,
+				632688E6226A6F07001BCC31 /* TransitDetailCell.swift */,
+				632688E4226A6D8F001BCC31 /* DailyDetailCell.swift */,
 				63CC49C922691A1700C70AD6 /* ViewEditEvent.swift */,
 				63CC49D122691C7A00C70AD6 /* DailyDetail.swift */,
+				632688D6226A665D001BCC31 /* VisitHistoryCell.swift */,
 				63CC49D322691EEF00C70AD6 /* EventDetail.swift */,
 				63CC49D522691FD600C70AD6 /* EventDetail2.swift */,
 				63CC49D72269205000C70AD6 /* TransitDetail.swift */,
@@ -404,12 +434,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				63CC49BA226914FD00C70AD6 /* ManageStaff.swift in Sources */,
+				632688DB226A68FF001BCC31 /* ConnectedSites.swift in Sources */,
 				707F25FC226905800066EC03 /* EmployeeVisitor.swift in Sources */,
+				632688D3226A64BF001BCC31 /* ExploreEventCell.swift in Sources */,
 				63CC49D022691B7500C70AD6 /* CreateEvent.swift in Sources */,
 				632688C7226A5565001BCC31 /* ManageSiteCell.swift in Sources */,
 				63CC49B42269121D00C70AD6 /* ManageSite.swift in Sources */,
 				70E066F22266558F00E8138A /* Utility.swift in Sources */,
 				707F2604226932BD0066EC03 /* Event.swift in Sources */,
+				632688D5226A656D001BCC31 /* ExploreSiteCell.swift in Sources */,
 				63CC49CC22691A7200C70AD6 /* EditSite.swift in Sources */,
 				63CC49D622691FD600C70AD6 /* EventDetail2.swift in Sources */,
 				700D77C92257B511009FE1EF /* DatabasesProject.xcdatamodeld in Sources */,
@@ -422,9 +455,11 @@
 				63CC49CA22691A1700C70AD6 /* ViewEditEvent.swift in Sources */,
 				63CC49BC2269158400C70AD6 /* SiteReport.swift in Sources */,
 				632688C9226A56FA001BCC31 /* ManageTransitCell.swift in Sources */,
+				632688E5226A6D8F001BCC31 /* DailyDetailCell.swift in Sources */,
 				63CC49C62269196F00C70AD6 /* CreateSite.swift in Sources */,
 				70E066F62266782900E8138A /* Navigation.swift in Sources */,
 				70E066F02266556A00E8138A /* RegisterEmployeeVisitor.swift in Sources */,
+				632688E1226A6B83001BCC31 /* ViewTransitHistory.swift in Sources */,
 				632688D1226A61C3001BCC31 /* ViewScheduleCell.swift in Sources */,
 				70E066E82266552D00E8138A /* RegisterNavigation.swift in Sources */,
 				63CC49B62269136100C70AD6 /* ManageTransit.swift in Sources */,
@@ -432,11 +467,13 @@
 				700D77C32257B511009FE1EF /* ViewController.swift in Sources */,
 				632688CF226A60A8001BCC31 /* SiteReportCell.swift in Sources */,
 				707F260022691B3E0066EC03 /* Site.swift in Sources */,
+				632688E3226A6BFE001BCC31 /* ManageProfile.swift in Sources */,
 				63CC49BE2269164300C70AD6 /* ViewSchedule.swift in Sources */,
 				700D77C12257B511009FE1EF /* AppDelegate.swift in Sources */,
 				63CC49C2226917F000C70AD6 /* ExploreSite.swift in Sources */,
 				707F25FA2268FF010066EC03 /* Employee.swift in Sources */,
 				63CC49C8226919D000C70AD6 /* CreateTransit.swift in Sources */,
+				632688DF226A6AA5001BCC31 /* TakeTransit.swift in Sources */,
 				63CC49D82269205000C70AD6 /* TransitDetail.swift in Sources */,
 				70E066F822667C6500E8138A /* EmailCell.swift in Sources */,
 				632688C3226A52A5001BCC31 /* TransitHistoryCell.swift in Sources */,
@@ -446,7 +483,10 @@
 				707F25FE2269119C0066EC03 /* ManagerUser.swift in Sources */,
 				70E066EE2266555D00E8138A /* RegisterEmployee.swift in Sources */,
 				708C3863226A2FAC00786BC9 /* VisitHistory.swift in Sources */,
+				632688E7226A6F07001BCC31 /* TransitDetailCell.swift in Sources */,
 				63CC49D422691EEF00C70AD6 /* EventDetail.swift in Sources */,
+				632688D7226A665D001BCC31 /* VisitHistoryCell.swift in Sources */,
+				632688DD226A6958001BCC31 /* StaffAssigned.swift in Sources */,
 				707F25F82268FDE70066EC03 /* Visitor.swift in Sources */,
 				70E066EC2266554C00E8138A /* RegisterVisitor.swift in Sources */,
 				632688C5226A53F5001BCC31 /* ManageUserCell.swift in Sources */,
