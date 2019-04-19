@@ -9,8 +9,10 @@
 import UIKit
 
 class EventDetail2: UIViewController {
+    
+    var event: Event?
 
-    @IBOutlet weak var event: UILabel!
+    @IBOutlet weak var name: UILabel!
     @IBOutlet weak var site: UILabel!
     @IBOutlet weak var startDate: UILabel!
     @IBOutlet weak var endDate: UILabel!
@@ -20,9 +22,25 @@ class EventDetail2: UIViewController {
     @IBOutlet weak var visitDate: UITextField!
     
     @IBAction func logVisit(_ sender: Any) {
+        if (visitDate.text != nil) {
+            let newVisit: Visit = Visit(siteName: event!.siteName, username: Model.getInstance().getCurrentUser().username, date: visitDate.text!)
+            newVisit.event = event
+            Model.getInstance().logVisit(visit: newVisit)
+        }
     }
     
     override func viewDidLoad() {
+        name.text = event!.name
+        site.text = event!.siteName
+        startDate.text = event!.startDate
+        endDate.text = event!.endDate
+        ticketPrices.text = "\(String(describing: event!.price))"
+        ticketsRemaining.text = "\(String(describing: event!.getTicketsRemaining()))"
+        desc.text = event!.descript
+        var staff: String = ""
+        for member in event!.staffAssigned {
+            staff.append("\(member)\n")
+        }
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

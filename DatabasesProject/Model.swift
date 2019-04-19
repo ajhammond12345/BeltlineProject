@@ -83,6 +83,10 @@ class Model: NSObject {
         return true;
     }
     
+    func updateUser(oldUser: User, newUser: User) {
+        
+    }
+    
     
     
     
@@ -145,7 +149,7 @@ class Model: NSObject {
         //TODO create site
     }
     
-    func updateEvent(event: Event) {
+    func updateEvent(newEvent: Event, oldEvent: Event) {
         //TODO update site
     }
     
@@ -187,7 +191,7 @@ class Model: NSObject {
         //TODO create site
     }
     
-    func updateSite(site: Site) {
+    func updateSite(newSite: Site, oldSite: Site) {
         //TODO update site
     }
     
@@ -217,19 +221,37 @@ class Model: NSObject {
     }
     
     func filterTransits(route: String?, transportType: String?, site: Site?, priceLow: String?, priceHigh: String?) {
+        var lowPrice: Float = 0.0
+        var highPrice: Float = 100.0
+        if (priceLow != nil) {
+            
+        }
+        if (priceHigh != nil) {
+            
+        }
+        print("Filtering Transit")
         //TODO filter transits
     }
     
     func createTransit(transit: Transit) {
-        
+        print("Create Transit")
+        //TODO: Create transit
     }
     
-    func updateTransite(transit: Transit) {
+    func updateTransite(newTransit: Transit, oldTransit: Transit) {
+        print("Update Transit")
+        //TODO: Update Transit
         
     }
     
     func deleteTransit(transit: Transit) {
-        
+        print("Delete Transit")
+        //TODO: Delete Transit
+    }
+    
+    func logTransit(transit: Transit, user: User, date: String) {
+        print("Log Transit")
+        //TODO: Log Transit
     }
     
     
@@ -251,5 +273,13 @@ class Model: NSObject {
     
         //TODO: filter visits
         
+    }
+    
+    func logVisit(visit: Visit) {
+        if visit.event != nil {
+            //TODO: Log event visit
+        } else {
+            //TODO: Log site visit
+        }
     }
 }

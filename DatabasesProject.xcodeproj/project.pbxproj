@@ -44,6 +44,7 @@
 		707F2604226932BD0066EC03 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F2603226932BD0066EC03 /* Event.swift */; };
 		708C3863226A2FAC00786BC9 /* VisitHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708C3862226A2FAC00786BC9 /* VisitHistory.swift */; };
 		708C3865226A306200786BC9 /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708C3864226A306200786BC9 /* Visit.swift */; };
+		708C3867226A5D7C00786BC9 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708C3866226A5D7C00786BC9 /* Detail.swift */; };
 		70E066E62266551C00E8138A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E066E52266551C00E8138A /* Login.swift */; };
 		70E066E82266552D00E8138A /* RegisterNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E066E72266552D00E8138A /* RegisterNavigation.swift */; };
 		70E066EA2266553E00E8138A /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E066E92266553E00E8138A /* RegisterUser.swift */; };
@@ -117,6 +118,7 @@
 		707F2603226932BD0066EC03 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		708C3862226A2FAC00786BC9 /* VisitHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitHistory.swift; sourceTree = "<group>"; };
 		708C3864226A306200786BC9 /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
+		708C3866226A5D7C00786BC9 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		70E066E52266551C00E8138A /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		70E066E72266552D00E8138A /* RegisterNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNavigation.swift; sourceTree = "<group>"; };
 		70E066E92266553E00E8138A /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				707F2603226932BD0066EC03 /* Event.swift */,
 				707F25F92268FF010066EC03 /* Employee.swift */,
 				707F25FB226905800066EC03 /* EmployeeVisitor.swift */,
+				708C3866226A5D7C00786BC9 /* Detail.swift */,
 				70E066E52266551C00E8138A /* Login.swift */,
 				70E066F52266782900E8138A /* Navigation.swift */,
 				70E066E72266552D00E8138A /* RegisterNavigation.swift */,
@@ -407,6 +410,7 @@
 				63CC49D82269205000C70AD6 /* TransitDetail.swift in Sources */,
 				70E066F822667C6500E8138A /* EmailCell.swift in Sources */,
 				70E066E62266551C00E8138A /* Login.swift in Sources */,
+				708C3867226A5D7C00786BC9 /* Detail.swift in Sources */,
 				63CC49DA2269220800C70AD6 /* SiteDetail.swift in Sources */,
 				70E066F4226655A200E8138A /* Model.swift in Sources */,
 				707F25FE2269119C0066EC03 /* ManagerUser.swift in Sources */,

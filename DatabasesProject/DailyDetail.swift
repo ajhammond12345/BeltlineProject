@@ -8,12 +8,25 @@
 
 import UIKit
 
-class DailyDetail: UIViewController {
+class DailyDetail: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return details.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //TODO: Table View cell
+        return UITableViewCell()
+    }
+    
+    
+    
+    var details: [Detail] = []
 
     @IBOutlet weak var table: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //TODO: Load in daily detail
 
         // Do any additional setup after loading the view.
     }

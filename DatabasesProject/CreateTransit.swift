@@ -52,6 +52,7 @@ class CreateTransit: UIViewController, UITableViewDelegate, UITableViewDataSourc
             if (priceVal != nil) {
                 let newTransit: Transit = Transit(type: selectedType!, route: route.text!, price: priceVal!, connectedSites: selectedSites)
                 Model.getInstance().createTransit(transit: newTransit)
+                performSegue(withIdentifier: "create_transit_to_manage_transit", sender: self)
             } else {
                 //TODO: Invalid price
             }
@@ -61,6 +62,8 @@ class CreateTransit: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     override func viewDidLoad() {
+        table.delegate = self
+        table.dataSource = self
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

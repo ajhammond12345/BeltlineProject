@@ -8,7 +8,24 @@
 
 import UIKit
 
-class EditSite: UIViewController {
+class EditSite: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return managers.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedManager = managers[row]
+    }
+    
+    
+    var managers: [Employee] = Model.getInstance().getManagers()
+    var selectedManager: Employee?
+
+    var site: Site?
 
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var zip: UITextField!
@@ -17,6 +34,11 @@ class EditSite: UIViewController {
     @IBOutlet weak var openEveryday: UISwitch!
     
     @IBAction func update(_ sender: Any) {
+        if name.text != nil && zip.text != nil && address.text != nil && selectedManager != nil {
+            let newSite: Site = Site(name: name.text!, zip: zip.text!, address: address.text!, managerUsername: selectedManager!.username, openEveryday: openEveryday.isOn)
+            Model.getInstance().updateSite(newSite: newSite, oldSite: site!)
+            performSegue(withIdentifier: "create_site_to_manage_site", sender: self)
+        }
     }
     
     override func viewDidLoad() {
