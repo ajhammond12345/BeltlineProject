@@ -13,6 +13,7 @@ class User: NSObject {
     var lname: String
     var username: String
     var emails: [String]
+    //add status
     
     func isVisitor() -> Bool {
         return false

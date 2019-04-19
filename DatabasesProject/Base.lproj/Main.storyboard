@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -2476,10 +2476,10 @@
             </objects>
             <point key="canvasLocation" x="4561" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Manage User-->
         <scene sceneID="Whh-kB-W69">
             <objects>
-                <viewController id="fzx-jo-l1S" sceneMemberID="viewController">
+                <viewController id="fzx-jo-l1S" customClass="ManageUser" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7YB-Yo-58S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2527,6 +2527,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cU3-gb-fxc">
                                 <rect key="frame" x="170" y="297" width="35" height="30"/>
                                 <state key="normal" title="Filter"/>
+                                <connections>
+                                    <action selector="filter:" destination="BDs-bS-Ozv" eventType="touchUpInside" id="SOH-us-VZ5"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lbF-wN-Lml">
                                 <rect key="frame" x="38" y="335" width="299" height="224"/>
@@ -2581,10 +2584,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3s2-Xn-bKb">
                                 <rect key="frame" x="88" y="593" width="52" height="30"/>
                                 <state key="normal" title="Decline"/>
+                                <connections>
+                                    <action selector="decline:" destination="fzx-jo-l1S" eventType="touchUpInside" id="7yn-88-Lqn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ub-9m-suJ">
                                 <rect key="frame" x="231" y="593" width="58" height="30"/>
                                 <state key="normal" title="Approve"/>
+                                <connections>
+                                    <action selector="approve:" destination="fzx-jo-l1S" eventType="touchUpInside" id="oJ9-CS-02Y"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgl-oN-IbB">
                                 <rect key="frame" x="201" y="190" width="142" height="118"/>
@@ -2633,8 +2642,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pNo-Tp-IvX"/>
                     </view>
+                    <connections>
+                        <outlet property="table" destination="lbF-wN-Lml" id="mbq-jw-309"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6b-fv-FCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="BDs-bS-Ozv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4560.8000000000002" y="820.83958020989508"/>
         </scene>
@@ -6364,12 +6377,10 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="CyT-fe-27u"/>
-        <segue reference="8iu-Hq-RLV"/>
-        <segue reference="fBw-en-VFE"/>
         <segue reference="CkT-Wz-DHe"/>
         <segue reference="NcF-Dc-yTQ"/>
         <segue reference="09D-f4-Ec0"/>
-        <segue reference="lsL-YV-iYf"/>
+        <segue reference="gsD-U7-tOP"/>
         <segue reference="1Ii-X0-ejw"/>
     </inferredMetricsTieBreakers>
 </document>

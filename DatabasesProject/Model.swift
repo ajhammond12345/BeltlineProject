@@ -19,7 +19,13 @@ class Model: NSObject {
         return model;
     }
     
+    func getUserStatuses() -> [String] {
+        return ["All", "Approved", "Pending", "Declined"]
+    }
     
+    func getUserTypes() -> [String] {
+        return ["All", "User", "Visitor", "Administrator", "Manager", "Staff", "Administrator-Visitor", "Manager-Visitor", "Staff-Visitor"]
+    }
     //User Stuff
     /*
  User Types:
@@ -34,6 +40,8 @@ class Model: NSObject {
  */
     private var userType: Int = 0
     private var currentUser: User?
+    var userList: [User] = []
+    var filteredUserList: [User] = []
 
     func setUserType(type: Int) {
         userType = type
@@ -49,6 +57,18 @@ class Model: NSObject {
     
     func getCurrentUser() -> User {
         return currentUser!
+    }
+    
+    func getUserList() -> [User] {
+        return userList
+    }
+    
+    func getFilteredUserList() -> [User] {
+        return filteredUserList
+    }
+    
+    func filterUsers(username: String?, type: Int?, status: String?) {
+        //TODO: filter user list
     }
     
     func login(email: String, password: String) -> Bool {
@@ -85,6 +105,14 @@ class Model: NSObject {
     
     func updateUser(oldUser: User, newUser: User) {
         
+    }
+    
+    func declineUser(user: User) {
+        //TODO: Decline user
+    }
+    
+    func acceptUser(user: User) {
+        //TODO: accept user
     }
     
     
