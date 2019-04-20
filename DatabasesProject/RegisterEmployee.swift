@@ -38,11 +38,21 @@ class RegisterEmployee: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1 { //user type
-            utype = row
+            utype = row + 1
         }
         if pickerView.tag == 2 { //states
             st = row
         }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView.tag == 1 { //user type
+            return employeeType[row]
+        }
+        if pickerView.tag == 2 { //states
+            return states[row]
+        }
+        return nil
     }
     
     

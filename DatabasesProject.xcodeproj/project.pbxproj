@@ -45,6 +45,7 @@
 		63CC49D622691FD600C70AD6 /* EventDetail2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49D522691FD600C70AD6 /* EventDetail2.swift */; };
 		63CC49D82269205000C70AD6 /* TransitDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49D72269205000C70AD6 /* TransitDetail.swift */; };
 		63CC49DA2269220800C70AD6 /* SiteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC49D92269220800C70AD6 /* SiteDetail.swift */; };
+		700A8FF0226B8E3D00221E20 /* TransitHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700A8FEF226B8E3D00221E20 /* TransitHistory.swift */; };
 		700D77C12257B511009FE1EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700D77C02257B511009FE1EF /* AppDelegate.swift */; };
 		700D77C32257B511009FE1EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700D77C22257B511009FE1EF /* ViewController.swift */; };
 		700D77C62257B511009FE1EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 700D77C42257B511009FE1EF /* Main.storyboard */; };
@@ -132,6 +133,7 @@
 		63CC49D522691FD600C70AD6 /* EventDetail2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetail2.swift; sourceTree = "<group>"; };
 		63CC49D72269205000C70AD6 /* TransitDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitDetail.swift; sourceTree = "<group>"; };
 		63CC49D92269220800C70AD6 /* SiteDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteDetail.swift; sourceTree = "<group>"; };
+		700A8FEF226B8E3D00221E20 /* TransitHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitHistory.swift; sourceTree = "<group>"; };
 		700D77BD2257B511009FE1EF /* DatabasesProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatabasesProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		700D77C02257B511009FE1EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		700D77C22257B511009FE1EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				708C3864226A306200786BC9 /* Visit.swift */,
 				632688C6226A5565001BCC31 /* ManageSiteCell.swift */,
 				707F2601226932AE0066EC03 /* Transit.swift */,
+				700A8FEF226B8E3D00221E20 /* TransitHistory.swift */,
 				707F2603226932BD0066EC03 /* Event.swift */,
 				707F25F92268FF010066EC03 /* Employee.swift */,
 				707F25FB226905800066EC03 /* EmployeeVisitor.swift */,
@@ -478,6 +481,7 @@
 				63CC49C8226919D000C70AD6 /* CreateTransit.swift in Sources */,
 				632688DF226A6AA5001BCC31 /* TakeTransit.swift in Sources */,
 				63CC49D82269205000C70AD6 /* TransitDetail.swift in Sources */,
+				700A8FF0226B8E3D00221E20 /* TransitHistory.swift in Sources */,
 				70E066F822667C6500E8138A /* EmailCell.swift in Sources */,
 				632688C3226A52A5001BCC31 /* TransitHistoryCell.swift in Sources */,
 				70E066E62266551C00E8138A /* Login.swift in Sources */,

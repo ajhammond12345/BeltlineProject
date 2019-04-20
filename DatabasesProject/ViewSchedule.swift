@@ -14,8 +14,17 @@ class ViewSchedule: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //TODO: Create cell
-        return UITableViewCell()
+        guard let cell: ViewScheduleCell = tableView.dequeueReusableCell(withIdentifier: "viewScheduleInfo", for: indexPath) as? ViewScheduleCell  else {
+            fatalError("The dequeued cell is not an instance of ViewScheduleCell.")
+        }
+        let event = schedule[indexPath.row]
+        cell.eventName.text = event.name
+        cell.siteName.text = event.siteName
+        cell.startDate.text = event.startDate
+        cell.endDate.text = event.endDate
+        cell.staffCount.text = String(describing: event.staffAssigned.count)
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -36,15 +45,18 @@ class ViewSchedule: UIViewController, UITableViewDelegate, UITableViewDataSource
         table.reloadData()
     }
     @IBOutlet weak var table: UITableView!
+    
     @IBAction func viewevent(_ sender: Any) {
+        if (selectedEvent != nil) {
+            performSegue(withIdentifier: "to_schedule_detail", sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //TODO
-        /* if segue.destination is EventDetail {
-         let dest = segue.destination as? EventDetail
-         dest?.event = selectedEvent
-         }*/
+        if segue.destination is EventDetail {
+            let dest = segue.destination as? EventDetail
+            dest?.event = selectedEvent
+        }
     }
     
     

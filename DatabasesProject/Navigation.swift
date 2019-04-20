@@ -33,7 +33,7 @@ class Navigation: UINavigationController {
         case 1:
             performSegue(withIdentifier: "to_visitor", sender: self)
         case 2:
-            performSegue(withIdentifier: "to_administrator", sender: self)
+            performSegue(withIdentifier: "to_admin", sender: self)
         case 3:
             performSegue(withIdentifier: "to_manager", sender: self)
         case 4:

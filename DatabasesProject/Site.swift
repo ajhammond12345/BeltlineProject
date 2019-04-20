@@ -14,6 +14,9 @@ class Site: NSObject {
     var address: String
     var managerUsername: String
     var openEveryday: Bool
+    var eventCount: Int?
+    var totalVisits: Int?
+    var myVisits: Int?
     
     init(name: String, zip: String, address: String, managerUsername: String, openEveryday: Bool) {
         self.name = name

@@ -21,13 +21,25 @@ class VisitHistory: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
         siteSelected = sites[row]
     }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return sites[row].name
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return visits.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //TODO: Create cell
-        return UITableViewCell()
+        guard let cell: VisitHistoryCell = tableView.dequeueReusableCell(withIdentifier: "visitHistoryInfo", for: indexPath) as? VisitHistoryCell  else {
+            fatalError("The dequeued cell is not an instance of VisitHistoryCell.")
+        }
+        let visit = visits[indexPath.row]
+        cell.date.text = visit.date
+        cell.event.text = visit.event?.name
+        cell.site.text = visit.siteName
+        let tmp: Float = visit.event?.price ?? 0.0
+        cell.price.text = "$\(String(describing: tmp))"
+        return cell
     }
     
     var visits: [Visit] = []
@@ -41,7 +53,7 @@ class VisitHistory: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
     @IBOutlet weak var siteName: UIPickerView!
     
     @IBAction func filter(_ sender: Any) {
-        Model.getInstance().filterVisits(visitor: (Model.getInstance().getCurrentUser() as! Visitor), name: name.text, startDate: startDate.text, endDate: endDate.text, site: siteSelected)
+        Model.getInstance().filterVisits(visitor: (Model.getInstance().getCurrentUser()), name: name.text, startDate: startDate.text, endDate: endDate.text, site: siteSelected)
         visits = Model.getInstance().getFilteredVisits()
         table.reloadData()
     }
@@ -50,12 +62,14 @@ class VisitHistory: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        table.delegate = self
+        table.dataSource = self
         siteName.delegate = self
         siteName.dataSource = self
         sites = Model.getInstance().getSites()
-        Model.getInstance().filterVisits(visitor: (Model.getInstance().getCurrentUser() as! Visitor), name: nil, startDate: nil, endDate: nil, site: nil)
+        Model.getInstance().filterVisits(visitor: (Model.getInstance().getCurrentUser()), name: nil, startDate: nil, endDate: nil, site: nil)
         visits = Model.getInstance().getFilteredVisits()
-        
+        table.reloadData()
 
         // Do any additional setup after loading the view.
     }

@@ -14,8 +14,15 @@ class TransitDetail: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //TODO: Create cell
-        return UITableViewCell()
+        guard let cell: TransitDetailCell = tableView.dequeueReusableCell(withIdentifier: "transitDetailInfo", for: indexPath) as? TransitDetailCell  else {
+            fatalError("The dequeued cell is not an instance of VisitHistoryCell.")
+        }
+        let transit = transitList[indexPath.row]
+        cell.route.text = transit.route
+        cell.transportType.text = transit.type
+        cell.price.text = String(describing: transit.price)
+        cell.numConnectedSites.text = String(describing: transit.connectedSites.count)
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -41,7 +48,7 @@ class TransitDetail: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         table.reloadData()
     }
     
-    var transitList: [Transit] = Model.getInstance().getTransits()
+    var transitList: [Transit] = Model.getInstance().getFilteredTransits()
     
     
     var transportTypes: [String] = Model.getInstance().getTransportTypes()
@@ -54,18 +61,31 @@ class TransitDetail: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     @IBOutlet weak var date: UITextField!
     
     @IBAction func logTransit(_ sender: Any) {
-        if date.text != nil {
+        //TODO: Validate date
+        if date.text != nil && selectedTransit != nil {
             Model.getInstance().logTransit(transit: selectedTransit!, user: Model.getInstance().getCurrentUser(), date: date.text!)
         }
     }
     
     override func viewDidLoad() {
+        Model.getInstance().filterTransits(route: nil, transportType: nil, site: site, priceLow: nil, priceHigh: nil)
+        transitList = Model.getInstance().getFilteredTransits()
+        table.reloadData()
         siteLabel.text = site!.name
+        transportType.delegate = self
+        transportType.dataSource = self
+        table.delegate = self
+        table.dataSource = self
         
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        Model.getInstance().filterTransits(route: nil, transportType: nil, site: site, priceLow: nil, priceHigh: nil)
+    }
+    
     
 
     /*

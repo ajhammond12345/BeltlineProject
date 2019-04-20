@@ -21,6 +21,8 @@ class Event: NSObject {
     var descript: String
     var duration: Int?
     var ticketsRemaining: Int?
+    var myVisits: Int?
+    var totalVisits: Int?
     
     init(name: String, price: Float, capacity: Int, startDate: String, endDate: String, minStaffRequired: Int, staffAssigned: [String], descript: String, siteName: String) {
         self.name = name

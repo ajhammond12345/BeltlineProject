@@ -14,7 +14,7 @@ class Employee: User {
     var city: String
     var state: String
     var zip: String
-    var type: Int
+    var type: Int //Admin: 0, Manager: 1, Staff: 2
     var site: Site?
     
     init(first: String, last: String, uname: String, emailAddr: [String], phoneNum: String, addr: String, cit: String, st: String, zp: String, utype: Int) {

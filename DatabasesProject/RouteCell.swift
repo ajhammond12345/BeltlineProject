@@ -12,8 +12,8 @@ class RouteCell: UITableViewCell {
 
     @IBOutlet weak var route: UILabel!
     @IBOutlet weak var transportType: UILabel!
-    @IBOutlet weak var Price: UILabel!
-    @IBOutlet weak var numConnectedSites: UILabel!
+    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var connectedSites: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
