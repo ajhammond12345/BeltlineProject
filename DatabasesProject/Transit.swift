@@ -14,6 +14,7 @@ class Transit: NSObject {
     var route: String
     var price: Float
     var connectedSites: [String]
+    var transitsLogged: Int?
     
     init(type: String, route: String, price: Float, connectedSites: [String]) {
         self.type = type

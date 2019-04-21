@@ -55,6 +55,14 @@ class ManageSite: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         }
     }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if (pickerView.tag == 1) {
+            return "\(managers[row].fname) \(managers[row].lname)"
+        } else {
+            return sites[row].name
+        }
+    }
+    
 
     @IBOutlet weak var openeveryday: UISwitch!
     @IBOutlet weak var manager: UIPickerView!
@@ -85,10 +93,10 @@ class ManageSite: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //TODO
-        /* if segue.destination is EditSite {
+        if segue.destination is EditSite {
          let dest = segue.destination as? EditSite
          dest?.site = selectedSite
-         }*/
+         }
     }
     
     override func viewDidLoad() {

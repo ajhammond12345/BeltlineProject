@@ -8,14 +8,37 @@
 
 import UIKit
 
-class CreateTransit: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CreateTransit: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITableViewDelegate, UITableViewDataSource {
+    
+    var typeSelected: String?
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return Model.getInstance().getTransportTypes().count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return Model.getInstance().getTransportTypes()[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        typeSelected = Model.getInstance().getTransportTypes()[row]
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sites.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //TODO: create cell
-        return UITableViewCell()
+        guard let cell: ConnectedSites = tableView.dequeueReusableCell(withIdentifier: "connectedSites", for: indexPath) as? ConnectedSites else {
+            fatalError("The dequeued cell is not an instance of ConnectedSites.")
+        }
+        cell.connectedSites.text = sites[indexPath.row].name
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

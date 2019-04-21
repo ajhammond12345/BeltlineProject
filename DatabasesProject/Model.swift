@@ -74,7 +74,7 @@ class Model: NSObject {
     func login(email: String, password: String) -> Bool {
         //TODO: implement login
         setCurrentUser(user: Employee(first: "Alexander", last: "Hammond", uname: "ahammond", emailAddr: ["ajhammond123@gmail.com"], phoneNum: "4048456798", addr: "1060 Standard Dr.", cit: "Atlanta", st: "GA", zp: "30319", utype: 0))
-        setUserType(type: 4)
+        setUserType(type: 2)
         return true;
     }
     
@@ -123,12 +123,14 @@ class Model: NSObject {
     
     //Employee Stuff
     
+    var tempManager = Employee(first: "Bob", last: "Smith", uname: "bsmith", emailAddr: ["bsmith@gmail.com"], phoneNum: "5555555505", addr: "123 Cherry Lane", cit: "New York", st: "NY", zp: "10001", utype: 3)
     private var managers: [Employee] = []
     private var staff: [Employee] = []
     private var filteredStaff: [Employee] = []
     private var schedule: [Event] = []
     
     func getManagers() -> [Employee] {
+        managers = [tempManager]
         //TODO: load managers
         return managers
     }
@@ -215,6 +217,8 @@ class Model: NSObject {
     let tmpSite1 = Site(name: "Piedmont Park", zip: "30303", address: "1111 Piedmont Rd, Atlanta, GA", managerUsername: "ahammond", openEveryday: true)
     let tmpSite2 = Site(name: "Tech Green", zip: "40404", address: "1111 GAtech Rd, Atlanta, GA", managerUsername: "ahammond", openEveryday: false)
     let tmpSite3 = Site(name: "Centennial Park", zip: "50505", address: "1111 Centennial Rd, Atlanta, GA", managerUsername: "ahammond", openEveryday: true)
+    
+    
     //Site Stuff
     private var sites: [Site] = []
     private var filteredSites: [Site] = []
@@ -251,6 +255,7 @@ class Model: NSObject {
     }
     
     func createSite(site: Site) {
+        print("creating site")
         //TODO create site
     }
     

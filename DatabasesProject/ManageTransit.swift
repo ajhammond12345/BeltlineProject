@@ -10,11 +10,11 @@ import UIKit
 
 class ManageTransit: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    var transportTypes: [String] = []
+    var transportTypes: [String] = Model.getInstance().getTransportTypes()
     var selectedTransport: String?
-    var sites: [Site] = []
+    var sites: [Site] = Model.getInstance().getSites()
     var selectedSite: Site?
-    var transits: [Transit] = []
+    var transits: [Transit] = Model.getInstance().getTransits()
     var selectedTransit: Transit?
     
     
@@ -37,8 +37,16 @@ class ManageTransit: UIViewController, UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //TODO: Create cell
-        return UITableViewCell()
+        guard let cell: ManageTransitCell = tableView.dequeueReusableCell(withIdentifier: "manageTransitInfo", for: indexPath) as? ManageTransitCell else {
+            fatalError("The dequeued cell is not an instance of ManageTransitCell.")
+        }
+        cell.route.text = transits[indexPath.row].route
+        cell.price.text = String(describing: transits[indexPath.row].price)
+        cell.numTransitLogged.text = String(describing: transits[indexPath.row].transitsLogged ?? 0)
+        cell.transportType.text = String(describing: transits[indexPath.row].type)
+        cell.numConnectedSites.text = String(describing: transits[indexPath.row].connectedSites.count)
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

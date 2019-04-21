@@ -21,6 +21,10 @@ class EditSite: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         selectedManager = managers[row]
     }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return "\(managers[row].fname) \(managers[row].lname)"
+    }
+    
     
     var managers: [Employee] = Model.getInstance().getManagers()
     var selectedManager: Employee?

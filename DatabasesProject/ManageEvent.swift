@@ -49,7 +49,7 @@ class ManageEvent: UIViewController, UITableViewDelegate, UITableViewDataSource 
     @IBAction func create(_ sender: Any) {
     }
     @IBAction func edit(_ sender: Any) {
-        //performSegue(withIdentifier: "manage_to_edit_event", sender: self)
+        performSegue(withIdentifier: "manage_to_edit_event", sender: self)
     }
     @IBAction func deletebutton(_ sender: Any) {
         if (selectedEvent != nil) {
