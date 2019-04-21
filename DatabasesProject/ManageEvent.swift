@@ -14,8 +14,16 @@ class ManageEvent: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //TODO: Create cell
-        return UITableViewCell()
+        guard let cell: ManageEventCell = tableView.dequeueReusableCell(withIdentifier: "manageEventInfo", for: indexPath) as? ManageEventCell else {
+            fatalError("The dequeued cell is not an instance of ManageEventCell.")
+        }
+        cell.name.text = events[indexPath.row].name
+        cell.staffCount.text = String(describing: events[indexPath.row].staffAssigned.count)
+        cell.duration.text = String(describing: events[indexPath.row].duration)
+        cell.totalVisits.text = String(describing: events[indexPath.row].totalVisits)
+        cell.totalRevenue.text = String(describing: events[indexPath.row].price * (events[indexPath.row].capacity - events[indexPath.row].ticketsRemaining! ?? 0))
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

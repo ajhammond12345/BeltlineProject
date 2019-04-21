@@ -15,8 +15,12 @@ class CreateEvent: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //TODO Create cell
-        return UITableViewCell()
+        guard let cell: StaffAssigned = tableView.dequeueReusableCell(withIdentifier: "staffAssignedInfo", for: indexPath) as? StaffAssigned else {
+            fatalError("The dequeued cell is not an instance of staffAssignedInfo.")
+        }
+        cell.staffAssigned.text = staff[indexPath.row].fname + staff[indexPath.row].lname
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

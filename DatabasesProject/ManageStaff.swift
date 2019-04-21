@@ -14,8 +14,14 @@ class ManageStaff: UIViewController, UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //TODO: Create staff cell
-        return UITableViewCell()
+        guard let cell: ManageStaffCell = tableView.dequeueReusableCell(withIdentifier: "manageStaffInfo", for: indexPath) as? ManageStaffCell else {
+            fatalError("The dequeued cell is not an instance of manageStaffInfo.")
+        }
+        cell.staffName.text = staff[indexPath.row].fname + staff[indexPath.row].lname
+        cell.numEventShifts.text = staff[indexPath.row].
+        
+        return cell
+
     }
     
     
